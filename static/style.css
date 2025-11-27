@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1.title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a {
+    color: #8cc2dd;
+    font-size: 1.2em;
+    text-decoration: none;
+
+    font-family: "Berkeley Mono",Iosevka,Hack,Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    padding-bottom: 2em;
+    padding-top: 1.2em;
+}
+
+main h1 {
+    padding-bottom: 0.75em;
+}
+
+header span {
+    color: #97C228;
+    font-family: "Berkeley Mono",Iosevka,Hack,Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
+}
+
+body {
+    background-color: #131a24;
+    color: #ffffff;
+    font-family: Georgia;
+
+    padding: 20px;
+    margin: auto;
+    max-width: 75ch;
+}

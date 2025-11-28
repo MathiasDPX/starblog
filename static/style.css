@@ -34,6 +34,11 @@ header span {
     font-family: "Berkeley Mono",Iosevka,Hack,Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
 }
 
+header img.icon {
+    height: 1em;
+    vertical-align: -0.15em;
+}
+
 body {
     background-color: #131a24;
     color: #ffffff;

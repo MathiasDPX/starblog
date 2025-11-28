@@ -39,6 +39,10 @@ nav {
         text-decoration: none;
         font-family: "Berkeley Mono", Iosevka, Hack, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 
+        &:has(+ a) {
+            margin-right: 1em;
+        }
+
         &:hover {
             text-decoration: underline;
         }

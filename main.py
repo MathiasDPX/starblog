@@ -21,6 +21,11 @@ def serve_scss(name):
     return Response(css, mimetype="text/css")
 
 
+@app.route("/archives")
+def archives():    
+    return render_template("archives.html", posts=list(posts.keys()))
+
+
 @app.route("/p/<string:name>")
 def serve_post(name):
     content = posts.get(name)

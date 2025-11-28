@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starblog</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" />
+    <link rel="preload" href="https://luke.hsiao.dev/fonts/Berkeley Mono Variable.woff2" as="font" type="font/woff2" crossorigin="">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1 class="title"><a href="/"><img src="{{ url_for('static', filename='favicon-white.svg') }}" class="icon"> <span>mathias</span></a></h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+        Subscribe via <a href="/rss.xml">rss</a> or <a href="/atom.xml">atom</a>
+    </footer>
+</body>
+</html>

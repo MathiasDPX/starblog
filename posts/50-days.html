@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    #progress-bar {
+        min-width: 100%;
+        height: 1em;
+        margin-bottom: 1em;
+        margin-top: -0.5em;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        background-color: #f0ffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    }
+
+    #progress {
+        width: calc((17 / 50) * 100%);
+        min-height: 100%;
+        background-color: #97c228;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1><img class="title" src="https://emoji.slack-edge.com/T09V59WQY1E/50days/e35ee9bec8dfa875.png">50 days</h1>
+
+<div id="progress-bar">
+    <div id="progress"></div>
+</div>
+
+<p>Here lies some content that need to be written one day...</p>
+{% endblock %}

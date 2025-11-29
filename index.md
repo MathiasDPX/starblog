@@ -4,7 +4,7 @@ layout: default
 # New blog
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies fringilla egestas. Sed id lectus dolor. Fusce ut posuere arcu. Vivamus efficitur mattis lacinia. Maecenas finibus orci ac est dapibus, sit amet aliquam odio ornare. Fusce luctus odio lectus, a tempus erat bibendum et. Ut sit amet enim eget elit porta egestas sit amet eu ipsum. In luctus scelerisque arcu, vitae laoreet neque iaculis a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin a ultrices purus. Phasellus euismod ornare nulla.
 
-![Opengraph preview of MathiasDPX/starblog](https://opengraph.githubassets.com/{{ 'now' | date:'%s' }}/MathiasDPX/starblog)
+![Opengraph preview of MathiasDPX/starblog](/assets/opengraph.png)
 *Opengraph preview of MathiasDPX/starblog*
 
 ```python

@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
-
-{% block content %}
+---
+layout: default
+---
 # New blog
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies fringilla egestas. Sed id lectus dolor. Fusce ut posuere arcu. Vivamus efficitur mattis lacinia. Maecenas finibus orci ac est dapibus, sit amet aliquam odio ornare. Fusce luctus odio lectus, a tempus erat bibendum et. Ut sit amet enim eget elit porta egestas sit amet eu ipsum. In luctus scelerisque arcu, vitae laoreet neque iaculis a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin a ultrices purus. Phasellus euismod ornare nulla.
 
@@ -22,4 +22,3 @@ Etiam ante tellus, consequat et quam quis, vehicula fringilla velit. Duis volutp
 Sed sapien quam, faucibus a tristique eget, consequat a velit. Mauris vestibulum nibh dui, sed tincidunt tellus condimentum ut. Sed vehicula leo risus, quis tincidunt dui faucibus sagittis. Donec quis ornare enim. Mauris accumsan ante id felis bibendum ullamcorper. Nulla facilisi. Vestibulum fermentum turpis dui, vitae bibendum sem ullamcorper ut. Nullam cursus leo sit amet tortor bibendum, in pulvinar urna ornare. Suspendisse et laoreet dui, non aliquet tortor. Donec tempor eros pulvinar neque lacinia, sagittis suscipit tellus imperdiet. Vestibulum odio turpis, tempor at vestibulum sed, tempus et lorem. Suspendisse nec nibh quis diam fermentum placerat a at nibh.
 
 <i class="note">Generated with <a href="https://www.lipsum.com/">lipsum.com</a></i>
-{% endblock %}

@@ -1,5 +1,0 @@
-markdown2[all]
-libsass
-feedgen
-flask
-toml

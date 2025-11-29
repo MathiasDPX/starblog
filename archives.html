@@ -1,0 +1,11 @@
+---
+layout: default
+permalink: /archives/
+---
+<h1>Archives</h1>
+
+<ul>
+{% for post in site.articles %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

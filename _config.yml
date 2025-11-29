@@ -1,0 +1,22 @@
+title: Starblog
+description: Yet another blog
+url: https://mathiasd.fr
+baseurl: ""
+
+collections:
+  articles:
+    output: true
+    permalink: /p/:slug/
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins: []

@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
-
-
-{% block content %}
+---
+layout: post
+title: "CSS format"
+description: "Test the markdown converter and CSS"
+slug: format
+---
 # CSS Test
 
 Lorem ipsum dorem situm blah blah shit...
@@ -12,5 +14,3 @@ def greet(name:str):
 
 greet("Mathias")
 ```
-
-{% endblock %}

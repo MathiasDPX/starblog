@@ -9,8 +9,16 @@
 
 img.title {
     max-height: 1em;
-    vertical-align: -0.25em;
+    vertical-align: -0.125em;
     margin-right: 0.3em;
+}
+
+pre {
+    padding: 1em;
+}
+
+li:has(+ li) {
+    padding-bottom: 0.25em;
 }
 
 header {

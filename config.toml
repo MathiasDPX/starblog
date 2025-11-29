@@ -1,0 +1,11 @@
+[feed]
+title = "Starblog"
+id = "starblog"
+link = "https://mathiasd.fr"
+description = "Yet another blog"
+
+
+[articles.50days]
+title = "50 Days"
+path = "50-days.html"
+description = "50 days of productivity until the end of the year"

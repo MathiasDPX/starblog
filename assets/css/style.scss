@@ -94,9 +94,28 @@ main {
         }
     }
 
+    ul {
+        margin-bottom: 2em;
+    }
+
     pre {
         padding: 1em;
         margin-bottom: 1.5em;
+    }
+
+    div#tags {
+        a.tag {
+            background-color: #162730;
+            padding: 0.3em;
+            border-radius: 3px;
+            font-size: 0.8em;
+            color: #ffffff;
+            text-decoration: none;
+
+            &:has(+ a.tag) {
+                margin-right: 0.25em;
+            }
+        }
     }
 }
 

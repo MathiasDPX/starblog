@@ -3,7 +3,12 @@ layout: post
 title: "CSS format"
 description: "Test the markdown converter and CSS"
 slug: format
+
+tags:
+- demo
+- hackclub
 ---
+
 # CSS Test
 
 Lorem ipsum dorem situm blah blah shit...

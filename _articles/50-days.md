@@ -3,6 +3,8 @@ layout: post
 title: "50 Days"
 description: "50 days of productivity until the end of the year"
 slug: 50days
+tags:
+- hackclub
 ---
 
 <style>

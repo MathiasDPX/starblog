@@ -11,7 +11,7 @@ with open('config.toml', 'r', encoding='utf-8') as f:
 
 app = Flask(__name__)
 fg = FeedGenerator()
-markdowner = Markdown(extras=["fenced-code-blocks", "pygments"])
+markdowner = Markdown(extras=["fenced-code-blocks"])
 
 fg.title(config['feed']['title'])
 fg.id(config['feed']['id'])

@@ -19,4 +19,9 @@ sass:
   sass_dir: _sass
   style: compressed
 
-plugins: []
+feed:
+  icon: /assets/favicon.png
+  path: /feed.xml
+
+plugins:
+  - jekyll-feed

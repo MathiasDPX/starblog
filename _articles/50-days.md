@@ -20,7 +20,7 @@ tags:
 }
 
 #progress {
-    width: calc((18 / 50) * 100%);
+    width: calc((20 / 50) * 100%);
     min-height: 100%;
     background-color: #97c228;
 }

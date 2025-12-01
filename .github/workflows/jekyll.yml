@@ -27,7 +27,9 @@ jobs:
         with:
           ruby-version: '3.4.7'
           bundler-cache: true
-          cache-version: 0
+          cache-version: 1
+        env:
+          BUNDLE_FROZEN: false
           
       - name: Setup Pages
         id: pages

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "CSS format"
-description: "Test the markdown converter and CSS"
+excerpt: "Test the markdown converter and CSS"
 slug: format
-
 tags:
 - demo
 - hackclub

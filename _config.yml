@@ -21,7 +21,11 @@ sass:
 
 feed:
   icon: /assets/favicon.png
-  path: /feed.xml
+  path: ""
+  excerpt_only: true
+  collections:
+    articles:
+      path: /feed.xml
 
 plugins:
   - jekyll-feed

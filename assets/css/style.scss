@@ -1,5 +1,6 @@
 ---
 ---
+
 * {
     padding: 0;
     margin: 0;
@@ -128,6 +129,11 @@ footer {
 
 body {
     background-color: #131a24;
+    background-image: url("{{ site.baseurl }}/assets/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: #ffffff;
     font-family: Georgia;
 
@@ -137,4 +143,5 @@ body {
     min-height: calc(100dvh - 5em);
     display: flex;
     flex-direction: column;
+    position: relative;
 }

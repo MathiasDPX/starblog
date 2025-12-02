@@ -6,3 +6,5 @@ _site/
 .bundle/
 vendor/
 feed.xml
+
+fastnoise.go

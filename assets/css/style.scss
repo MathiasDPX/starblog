@@ -132,7 +132,11 @@ body {
     background-image: url("{{ site.baseurl }}/assets/background.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+
+    @media screen and (max-width: 670px) {
+        background-size: 600px;
+    }
 
     color: #ffffff;
     font-family: Georgia;

@@ -3,6 +3,8 @@ description: Yet another blog
 url: https://mathiasd.fr
 baseurl: ""
 
+commit_sha: "<%= ENV['JEKYLL_COMMIT_SHA'] %>"
+
 collections:
   articles:
     output: true

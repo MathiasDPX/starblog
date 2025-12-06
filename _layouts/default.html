@@ -23,7 +23,7 @@
 
     <footer>
         Subscribe via <a href="{{ '/feed.xml' | relative_url }}">rss</a><br>
-        <small>Built on <a href="https://github.com/MathiasDPX/starblog/commit/{{ site.env.JEKYLL_COMMIT_SHA | default: 'unknown' }}">{{ site.env.JEKYLL_COMMIT_SHA | default: 'unknown' | slice: 0, 7 }}</a></small>
+        <small>Built on <a href="https://github.com/MathiasDPX/starblog/commit/{{ site.commit_sha | default: 'unknown' }}">{{ site.commit_sha | default: "unknown" | slice: 0, 7 }}</a></small>
     </footer>
 </body>
 </html>

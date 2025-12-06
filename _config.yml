@@ -33,4 +33,5 @@ feed:
       path: /feed.xml
 
 plugins:
+  - jekyll-environment-variables
   - jekyll-feed

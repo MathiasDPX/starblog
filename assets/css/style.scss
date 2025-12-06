@@ -177,6 +177,7 @@ blockquote {
             position: absolute;
             right: 5%;
             transform: translate(0%, -50%);
+            border-radius: 5px;
         }
 
         p:has(> a):not(:has(> :not(a))) {

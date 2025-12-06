@@ -2,16 +2,22 @@
 layout: default
 ---
 # New blog
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies fringilla egestas. Sed id lectus dolor. Fusce ut posuere arcu. Vivamus efficitur mattis lacinia. Maecenas finibus orci ac est dapibus, sit amet aliquam odio ornare. Fusce luctus odio lectus, a tempus erat bibendum et. Ut sit amet enim eget elit porta egestas sit amet eu ipsum. In luctus scelerisque arcu, vitae laoreet neque iaculis a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin a ultrices purus. Phasellus euismod ornare nulla.
 
 > ## jekyll-hackclub
 > <img src="https://i.ibb.co/Q7BqnHy4/jekyll-hackclub.png">
 >
-> Jekyll plugin to mention Slack users or channels. You can also query users.info api endpoints to retrieve raw informations like userid or avatar
-> It also add an Slack emoji resolver
+> Jekyll plugin to mention Slack users or channels. You can also query users.info api endpoints to retrieve raw informations like userid or avatar.It also add an Slack emoji resolver
 > 
 > <a href="https://github.com/MathiasDPX/jekyll-hackclub">GitHub</a><a href="https://mathiasdpx.github.io/jekyll-hackclub/">Demo</a><a href="https://rubygems.org/gems/jekyll-hackclub">Gem</a>
-{: type="project"}
+{: type="project" style="border-left-color: #ED3850"}
+
+> ## GH-DOOM
+> <img src="https://avatars.githubusercontent.com/u/187232905?v=4">
+>
+> Play DOOM64 through GitHub contributions graph. It take a screenshot of the game, resize it and display it on the graph through Selenium and repeat as fast as possible
+> 
+> <a href="https://github.com/GH-DOOM/DOOM64">GitHub</a><a href="https://www.youtube.com/watch?v=OPmpIwJ8uDY">Demo video</a>
+{: type="project" style="border-left-color: #FFDF0D"}
 
 ![Opengraph preview of MathiasDPX/starblog]({{ "/assets/opengraph.png" | relative_url }})
 *Opengraph preview of MathiasDPX/starblog*

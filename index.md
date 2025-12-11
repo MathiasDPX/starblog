@@ -40,5 +40,5 @@ Here's some projects I'm proud of, some were made for HackClub's YSWS, other for
 >
 > Play Minecraft with a barcode reader, it read input sent by the reader and press the associated keys from a dictionnary. It is survival-friendly by having toggle keys for eating and breaking blocks however you need the mouse to move the camera around
 >
-> [GitHub](https://github.com/MathiasDPX/Babarcode)
+> [GitHub](https://github.com/MathiasDPX/Babarcode) [Demo video](https://www.youtube.com/watch?v=cZzIax472Eg)
 {: type="project" style="border-left-color: #4DAB61"}

@@ -180,13 +180,9 @@ blockquote {
             border-radius: 5px;
         }
 
-        p:has(> a):not(:has(> :not(a))) {
+        p:last-of-type:has(> a):not(:has(> :not(a))) {
             // only p with a has childrens
             margin-top: 1em;
-
-            a:has(+ a) {
-                margin-right: 0.25em;
-            }
 
             a {
                 &::before {

@@ -9,4 +9,5 @@ group :jekyll_plugins do
     gem "jekyll-environment-variables"
     gem "jekyll-feed", "~> 0.17"
     gem "jekyll-tagging"
+    gem "jekyll-hackclub"
 end

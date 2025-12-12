@@ -100,7 +100,7 @@ This week was probably the most productive, I've:
 ## 5^th^ week (29-35)
 
 *ongoing...*
-- {% mention U05MKEZUY67 ; alice %} conviced me to try midnight so I'm currently doing it
+- {% mention U05MKEZUY67 ; alice %} convinced me to try midnight so I'm currently doing it
 
 ## 6^th^ week (36-42)
 

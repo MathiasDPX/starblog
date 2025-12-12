@@ -7,7 +7,7 @@ layout: default
 <ul>
     {% for article in site.articles %}
         {% if article.tags contains page.tag %}
-        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+        <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
         {% endif %}
     {% endfor %}
 </ul>

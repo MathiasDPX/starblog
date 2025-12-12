@@ -20,16 +20,39 @@ tags:
 }
 
 #progress {
-    width: calc((30 / 50) * 100%);
+    width: calc((31 / 50) * 100%);
     min-height: 100%;
+    font-family: "Berkeley Mono",Iosevka,Hack,Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
+    font-size: 0.8em;
+    text-align: center;
+    color: #000000;
     background-color: #97c228;
 }
 </style>
 
-# <img class="title" src="https://emoji.slack-edge.com/T09V59WQY1E/50days/e35ee9bec8dfa875.png">50 days
+# <img class="title" src="https://emoji.slack-edge.com/T09V59WQY1E/50days/e35ee9bec8dfa875.png">50 Days
 
 <div id="progress-bar">
-    <div id="progress"></div>
+    <div id="progress">62%</div>
 </div>
 
-Here lies some content that need to be written one day...
+{% mention C09SWT5DCGY %}
+
+50 Days is a HackClub event set on November 11th, 2025 -- 50 days before 2026 -- where participant has to first send a list of goals they want to achieve by the end of 2025. And then for the next 50 days, send a daily update about what they did. It doesn't give any rewards but rather encourages people to be productive.
+
+Here's my goals:
+- Setup [Glance](https://github.com/glanceapp/glance)
+- Create a [FreshRSS](https://freshrss.org/index.html) widget for Glance
+- Refactor [wakamitm](https://github.com/MathiasDPX/wakatime_mitm) frontend
+- Read an academic paper
+- Finish "Animal Farm"
+- Make an api/webapp for my light bulb
+- Ship my [OneDrive proxy](https://github.com/MathiasDPX/onedrive-proxy)
+- Make an archiving tool
+- Archive stuff
+- Add a dropbox to the 1drv proxy
+- Somehow make [a workflow](https://github.com/MathiasDPX/aseprite-bin/blob/master/.github/workflows/specific-version.yml) public so user can choose what version to build
+- Make a real website for [mathiasd.fr](https://mathiasd.fr/)
+- Make something in C(++)
+- Publish dotfiles
+- More but idk yet

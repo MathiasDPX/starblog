@@ -6,7 +6,7 @@ layout: default
 I'm bad at writing but want to write blogposts anyways, I currently live near [Brest](https://www.google.com/maps/search/Brest)<br>
 I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start)
 
-Here's some projects I'm proud of, some were made for HackClub's YSWS, other for me:
+Here's some projects I'm proud of:
 
 > ## jekyll-hackclub
 > ![jekyll-hackclub icon](https://i.ibb.co/Q7BqnHy4/jekyll-hackclub.png)

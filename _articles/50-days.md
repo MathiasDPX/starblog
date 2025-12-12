@@ -36,8 +36,6 @@ tags:
     <div id="progress">62%</div>
 </div>
 
-{% mention C09SWT5DCGY %}
-
 50 Days is a HackClub event set on November 11th, 2025 -- 50 days before 2026 -- where participant has to first send a list of goals they want to achieve by the end of 2025. And then for the next 50 days, send a daily update about what they did. It doesn't give any rewards but rather encourages people to be productive.
 
 Here's my goals:
@@ -56,3 +54,58 @@ Here's my goals:
 - Make something in C(++)
 - Publish dotfiles
 - More but idk yet
+
+
+## 1^st^ week (1-7)
+
+- Setup Glance
+- Made my workflow public
+- Added a dropbox to onedrive-proxy
+- Publish it to Docker Hub
+- Started to archive [thevalleyofcode.com](https://thevalleyofcode.com/) with [ai.hackclub.com](https://ai.hackclub.com) (bad idea)
+
+## 2^nd^ week (8-14)
+
+This week was probably the most productive, I've:
+- Setup a proxy server for scraping on Nest
+- Made a TOML config for my archiving tool
+- Played a bit of [MHRD](https://store.steampowered.com/app/576030/MHRD/)
+- Homemade PCB at school
+- Hosted my 1drv proxy on Nest at [files.mathiasd.fr](https://files.mathiasd.fr/)
+- Fixed a lot of 1drv proxy bugs {% emoji sad-pf %}
+- Bought [*Refactoring English*](https://refactoringenglish.com/early-access/) (which helped me write this blog)
+- Made [wakey-wakey](https://mathiasdpx.github.io/wakey-wakey/) because I have bad sleep habits (now I have bad sleep habits and a useless website)
+- Installed [Halloy](https://halloy.chat/) cause Hackclub's Slack was down due to migration
+
+## 3^rd^ week (15-21)
+
+- Started to make {% mention U09VC4NQXC6 ; Scrappy-Doo %} (which took me 4 hours)
+- Began this blog because [bearblog.dev](http://bearblog.dev/) require money for having my own domain
+  - Found a name (starblog)
+  - Moved from Flask to Jekyll
+  - Added RSS feed
+  - Added a lot of CSS
+  - Made a github workflow
+  - Added a cool wavy background using [FastNoiseLite](https://github.com/MathiasDPX/starblog/tree/main/noise)
+- Watched [*Frankenstein (2025)*](https://letterboxd.com/mathias_dpx/film/frankenstein-2025/) and [*Isle of Dogs*](https://letterboxd.com/mathias_dpx/film/isle-of-dogs-2018/)
+- Started [AoC](https://github.com/MathiasDPX/advent-of-code)
+
+## 4^th^ week (22-28)
+
+- Added blockquotes on starblog
+- Started the bulb api (called it bubulb)
+- Made my own {% mention U091NP7GCDS ; leeker %} (called david-leeker)
+- Tried [pypy](https://pypy.org/) (it's not that good with AoC)
+
+## 5^th^ week (29-35)
+
+*ongoing...*
+- {% mention U05MKEZUY67 ; alice %} conviced me to try midnight so I'm currently doing it
+
+## 6^th^ week (36-42)
+
+*starting soon*
+
+## 7^th^ week (43-50)
+
+*starting soon*

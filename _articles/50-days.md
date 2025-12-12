@@ -36,9 +36,9 @@ tags:
     <div id="progress">62%</div>
 </div>
 
-50 Days is a HackClub event set on November 11th, 2025 -- 50 days before 2026 -- where participant has to first send a list of goals they want to achieve by the end of 2025. And then for the next 50 days, send a daily update about what they did. It doesn't give any rewards but rather encourages people to be productive.
+50 Days is a HackClub event running on November 11th, 2025 -- 50 days before 2026 --. The idea is simple: participants share a list of goals they want to accomplish before the end of the year, then post daily updates for the next 50 days. There are no prizes; the reward is the productivity you (hopefully) maintain.
 
-Here's my goals:
+Here are the goals I set for myself:
 - Setup [Glance](https://github.com/glanceapp/glance)
 - Create a [FreshRSS](https://freshrss.org/index.html) widget for Glance
 - Refactor [wakamitm](https://github.com/MathiasDPX/wakatime_mitm) frontend
@@ -58,6 +58,7 @@ Here's my goals:
 
 ## 1^st^ week (1-7)
 
+The first week wasn't the most productive but I started slow
 - Setup Glance
 - Made my workflow public
 - Added a dropbox to onedrive-proxy
@@ -66,7 +67,7 @@ Here's my goals:
 
 ## 2^nd^ week (8-14)
 
-This week was probably the most productive, I've:
+This ended up being my most productive week so far. I:
 - Setup a proxy server for scraping on Nest
 - Made a TOML config for my archiving tool
 - Played a bit of [MHRD](https://store.steampowered.com/app/576030/MHRD/)
@@ -79,23 +80,24 @@ This week was probably the most productive, I've:
 
 ## 3^rd^ week (15-21)
 
+This week i've started to make a bunch of different things:
 - Started to make {% mention U09VC4NQXC6 ; Scrappy-Doo %} (which took me 4 hours)
-- Began this blog because [bearblog.dev](http://bearblog.dev/) require money for having my own domain
+- Began this blog because [bearblog.dev](http://bearblog.dev/) charges for custom domains
   - Found a name (starblog)
-  - Moved from Flask to Jekyll
+  - Switched from Flask to Jekyll
   - Added RSS feed
-  - Added a lot of CSS
-  - Made a github workflow
+  - Wrote a lot of CSS
+  - Set up a github workflow
   - Added a cool wavy background using [FastNoiseLite](https://github.com/MathiasDPX/starblog/tree/main/noise)
 - Watched [*Frankenstein (2025)*](https://letterboxd.com/mathias_dpx/film/frankenstein-2025/) and [*Isle of Dogs*](https://letterboxd.com/mathias_dpx/film/isle-of-dogs-2018/)
-- Started [AoC](https://github.com/MathiasDPX/advent-of-code)
+- Started doing [Advent of Code](https://github.com/MathiasDPX/advent-of-code)
 
 ## 4^th^ week (22-28)
 
 - Added blockquotes on starblog
 - Started the bulb api (called it bubulb)
-- Made my own {% mention U091NP7GCDS ; leeker %} (called david-leeker)
-- Tried [pypy](https://pypy.org/) (it's not that good with AoC)
+- Made my own {% mention U091NP7GCDS ; leeker %} (named david-leeker)
+- Tried [pypy](https://pypy.org/) (it's not that good with my AoC solutions)
 
 ## 5^th^ week (29-35)
 

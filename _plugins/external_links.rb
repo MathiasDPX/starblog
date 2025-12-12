@@ -58,9 +58,7 @@ require 'uri'
         if is_local
           full_tag
         else
-          # append ref param correctly (use & if ? already present)
-          separator = href.include?('?') ? '&' : '?'
-          new_href = "#{href}#{separator}ref=#{site_url}"
+          new_href = "#{href}"
 
           # preserve original pre/post attributes and add target & rel
           # but avoid duplicating attributes if present (we already checked)

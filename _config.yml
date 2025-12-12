@@ -14,7 +14,7 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
-  input: GFM
+  input: SubSup
   syntax_highlighter: rouge
 
 exclude:

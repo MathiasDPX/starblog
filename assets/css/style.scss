@@ -69,15 +69,17 @@ main {
     h2 {
         margin-bottom: 0.4em;
 
+        /*
         &:not(:where(blockquote *)) {
             &:hover::before {
                 content: "#";
                 color: #20a2e2;
                 position: absolute;
-                font-size: 1.25em;
+                font-size: 1em;
                 transform: translate(-125%, 0%);
             }
         }
+        */
     }
 
     p:not(:where(blockquote *)) {

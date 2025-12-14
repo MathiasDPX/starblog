@@ -121,6 +121,10 @@ This week i've started to make a bunch of different things:
 
 *ongoing...*
 - {% mention U05MKEZUY67 ; alice %} convinced me to try midnight so I'm currently doing it
+- Made keyshield, a reverse proxy to hide my [apiflash.com](https://apiflash.com/) keys from public because when I shared a leek in {% mention C06089401GT %} I made like 30 api calls out of 100 per **month**
+- Submitted a bunch of projects for midnight
+- Automated the progress bar on top of the page
+- Finished AoC 2025 (check my [solutions](https://github.com/MathiasDPX/advent-of-code/tree/main/2025))
 
 ## 6^th^ week (36-42)
 

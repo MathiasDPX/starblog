@@ -100,8 +100,11 @@ main {
         }
     }
 
-    ul {
+    ul:not(li ul) {
         margin-bottom: 2em;
+    }
+    li ul {
+        margin-bottom: 0.25em;
     }
 
     pre {

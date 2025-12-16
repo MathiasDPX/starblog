@@ -125,6 +125,7 @@ This week i've started to make a bunch of different things:
 - Submitted a bunch of projects for midnight
 - Automated the progress bar on top of the page
 - Finished AoC 2025 (check my [solutions](https://github.com/MathiasDPX/advent-of-code/tree/main/2025))
+- Got half my hours (25h) approved for midnight
 
 ## 6^th^ week (36-42)
 

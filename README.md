@@ -1,4 +1,4 @@
-# starblog
+# starblog
 
 Personal blog based on [bearblog](https://bearblog.dev)
 

@@ -9,14 +9,23 @@ tags:
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css"
      crossorigin=""/>
+<!-- TODO: Geodesic lines -->
 <script type="importmap">
     {
         "imports": {
             "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
-            "leaflet-extra-marker": "https://unpkg.com/leaflet-extra-markers@latest/src/index.js"
+            "leaflet-extra-marker": "https://unpkg.com/leaflet-extra-markers@latest/src/index.js",
+            "leaflet.geodesic": "https://cdn.jsdelivr.net/npm/leaflet.geodesic"
         }
     }
 </script>
+
+<style>
+.popup-img {
+    width: 50%;
+    height: auto;
+}
+</style>
 
 # Travels
 
@@ -44,15 +53,30 @@ new TileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.
 	ext: 'jpg'
 }).addTo(map);
 
-const airports_locs = {
-    "BES": [48.4478989, -4.41854],
-    "VIE": [48.1102980, 16.56970]
+class Airport {
+    constructor(country, name, code, location) {
+        this.country = country;
+        this.name = name;
+        this.code = code;
+        this.location = location;
+    }
+
+    createPopup() {
+        return `${this.country} ${this.name}`;
+    }
 }
+
+const airports = [
+    new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.4478989, -4.41854]),
+    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970]),
+    new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005])
+];
 
 const airportsSmall = new FeatureGroup();
 const airportsLarge = new FeatureGroup();
-for (const [code, location] of Object.entries(airports_locs)) {
-    new Marker(location, {
+airports.forEach(function (airport, index) {
+    const popup = airport.createPopup();
+    const small = new Marker(airport.location, {
         icon: new Icon({
             contentHtml: '<i class="fa fa-plane-up"></i>',
             color: "#1b75bb",
@@ -60,18 +84,23 @@ for (const [code, location] of Object.entries(airports_locs)) {
             scale: 0.75,
             svg: ChipDiamondPanel
         }),
-    }).addTo(airportsSmall);
+    })
 
-    new Marker(location, {
+    const large = new Marker(airport.location, {
         icon: new Icon({
             contentHtml: '<i class="fa fa-plane-up"></i>',
             color: "#1b75bb",
-            //contentColor: "white",
             scale: 1,
             svg: ChipDiamondPanel
         }),
-    }).addTo(airportsLarge);
-}
+    });
+
+    small.bindPopup(popup);
+    large.bindPopup(popup);
+
+    small.addTo(airportsSmall);
+    large.addTo(airportsLarge);
+});
 
 airportsSmall.addTo(map);
 

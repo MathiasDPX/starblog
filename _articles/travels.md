@@ -69,7 +69,9 @@ class Airport {
 const airports = [
     new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.4478989, -4.41854]),
     new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970]),
-    new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005])
+    new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005]),
+    new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.0127983, 2.55]),
+    new Airport("🇭🇺", "Budapest Ferenc Liszt International Airport", "BUD", [47.4369011, 19.2556])
 ];
 
 const airportsSmall = new FeatureGroup();

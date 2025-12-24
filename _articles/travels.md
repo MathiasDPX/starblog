@@ -45,11 +45,12 @@ new TileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.
 }).addTo(map);
 
 const airports_locs = {
-    "BES": [48.4478989, -4.41854]
+    "BES": [48.4478989, -4.41854],
+    "VIE": [48.1102980, 16.56970]
 }
 
-const airports = new FeatureGroup();
-
+const airportsSmall = new FeatureGroup();
+const airportsLarge = new FeatureGroup();
 for (const [code, location] of Object.entries(airports_locs)) {
     new Marker(location, {
         icon: new Icon({
@@ -59,8 +60,33 @@ for (const [code, location] of Object.entries(airports_locs)) {
             scale: 0.75,
             svg: ChipDiamondPanel
         }),
-    }).addTo(airports);
+    }).addTo(airportsSmall);
+
+    new Marker(location, {
+        icon: new Icon({
+            contentHtml: '<i class="fa fa-plane-up"></i>',
+            color: "#1b75bb",
+            //contentColor: "white",
+            scale: 1,
+            svg: ChipDiamondPanel
+        }),
+    }).addTo(airportsLarge);
 }
 
-airports.addTo(map);
+airportsSmall.addTo(map);
+
+map.on('zoomend', () => {
+    const zoom = map.getZoom();
+    if (zoom >= 4) {
+        if (!map.hasLayer(airportsLarge)) {
+            map.removeLayer(airportsSmall);
+            map.addLayer(airportsLarge);
+        }
+    } else {
+        if (!map.hasLayer(airportsSmall)) {
+            map.removeLayer(airportsLarge);
+            map.addLayer(airportsSmall);
+        }
+    }
+});
 </script>

@@ -3,6 +3,7 @@ description: Yet another blog
 url: https://mathiasd.fr
 baseurl: ""
 
+HACKCLUB_API: "https://hackclub.mathiasd.fr"
 commit_sha: "<%= ENV['JEKYLL_COMMIT_SHA'] %>"
 
 collections:

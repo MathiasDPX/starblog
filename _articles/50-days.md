@@ -134,7 +134,11 @@ This week i've started to make a bunch of different things:
 - Found a name for my new server. The first one is named **ping**uin (in reference of the ping command) so i'll name the other **cat**erpillar (in reference of the cat command and the very hungry caterpillar)
 - Bubulb got reviewed but denied so I had to fix it
 - onedrive-proxy got reviewed too but [Nest](https://hackclub.app) was down and I didn't had time to fix it so reviewer denied it because the demo link wasn't working so I moved it to pinguin
+- Released my dotfiles on [MathiasDPX/dotenv](https://github.com/MathiasDPX/dotenv)
+- I'm going to [Midnight](https://midnight.hackclub.com/) {% emoji yay %}
 
 ## 7^th^ week (43-50)
 
-*starting soon*
+The last week of the year was pretty quiet, as it includes Christmas and New Year. So I decided to save my energy rather than stay up all night coding
+- Added a map of travels to starblog (c.f. [travels]({{ '/p/travels/' | relative_url }}))
+- Setup caterpillar and moved everything I had on Nest on it like: 1drv-proxy, wakamitm, jekyll-hackclub's backend and more

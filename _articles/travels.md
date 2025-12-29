@@ -71,7 +71,9 @@ const airports = [
     new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970]),
     new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005]),
     new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.0127983, 2.55]),
-    new Airport("🇭🇺", "Budapest Ferenc Liszt International Airport", "BUD", [47.4369011, 19.2556])
+    new Airport("🇭🇺", "Budapest Ferenc Liszt International Airport", "BUD", [47.4369011, 19.2556]),
+    new Airport("🇬🇧", "London City Airport  ", "LCY", [51.5052986, 0.055278]),
+    new Airport("🇬🇧", "London Heathrow Airport  ", "LHR", [51.4706001, -0.461941])
 ];
 
 const airportsSmall = new FeatureGroup();

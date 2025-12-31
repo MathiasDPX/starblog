@@ -184,6 +184,12 @@ body {
     border-radius: 7px;
 }
 
+.leaflet-popup-content {
+    p {
+        height: 0.5em;
+        margin: 0px !important;
+    }
+}
 
 blockquote {
     border-left: 4px solid #7f848e;

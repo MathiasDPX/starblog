@@ -20,13 +20,6 @@ tags:
     }
 </script>
 
-<style>
-.popup-img {
-    width: 50%;
-    height: auto;
-}
-</style>
-
 # Travels
 
 <div id="map"></div>
@@ -54,21 +47,23 @@ new TileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.
 }).addTo(map);
 
 class Airport {
-    constructor(country, name, code, location) {
+    constructor(country, name, code, location, description) {
         this.country = country;
         this.name = name;
         this.code = code;
         this.location = location;
+        this.description = description;
     }
 
     createPopup() {
-        return `${this.country} ${this.name}`;
+        const description = this.description ? `<p class="half"></p>${this.description}` : '';
+        return `${this.country} ${this.name}${description}`;
     }
 }
 
 const airports = [
     new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.4478989, -4.41854]),
-    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970]),
+    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970], '<a href="https://midnight.hackclub.com/">Midnight</a>'),
     new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005]),
     new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.0127983, 2.55]),
     new Airport("🇭🇺", "Budapest Ferenc Liszt International Airport", "BUD", [47.4369011, 19.2556]),
@@ -84,7 +79,6 @@ airports.forEach(function (airport, index) {
         icon: new Icon({
             contentHtml: '<i class="fa fa-plane-up"></i>',
             color: "#1b75bb",
-            //contentColor: "white",
             scale: 0.75,
             svg: ChipDiamondPanel
         }),

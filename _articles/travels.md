@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Travels"
-excerpt: "Test the markdown converter and CSS"
+excerpt: "  Around the world  around the world  "
 slug: travels
 tags:
 - hackclub

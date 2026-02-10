@@ -11,6 +11,13 @@ collections:
     output: true
     permalink: /p/:slug/
 
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      date: 1999-01-01 00:00:00 +0000
+
 markdown: kramdown
 highlighter: rouge
 

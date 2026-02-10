@@ -3,6 +3,7 @@ layout: post
 title: "50 Days"
 excerpt: "50 days of productivity until the end of the year"
 slug: 50days
+date: 2025-12-31 23:59:59
 tags:
 - hackclub
 ---

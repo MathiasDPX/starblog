@@ -5,7 +5,6 @@ excerpt: "Test the markdown converter and CSS"
 slug: format
 tags:
 - demo
-- hackclub
 ---
 
 # CSS Test

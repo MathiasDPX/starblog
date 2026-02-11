@@ -69,6 +69,10 @@ main {
     h2 {
         margin-bottom: 0.4em;
 
+        &:not(:first-of-type) {
+            padding-top: 0.1em;
+        }
+
         /*
         &:not(:where(blockquote *)) {
             &:hover::before {
@@ -84,14 +88,20 @@ main {
 
     p:not(:where(blockquote *)) {
         margin-bottom: 1.5em;
+        line-height: 1.3em;
+        text-align: justify;
 
-        img:has(+ em) {
+        &:has(+ ul) {
+            margin-bottom: 0.75em;
+        }
+
+        img {
             display: block;
             width: 100%;
             border-radius: 5px;
         }
 
-        img+em {
+        img + em {
             text-align: center;
             color: #cecece;
             display: block;

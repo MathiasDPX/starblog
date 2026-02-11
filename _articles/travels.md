@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Travels"
-excerpt: "  Around the world  around the world  "
+excerpt: "Around the world around the world"
 slug: travels
 tags:
 - hackclub

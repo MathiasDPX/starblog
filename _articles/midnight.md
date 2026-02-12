@@ -9,7 +9,7 @@ tags:
 - hackathon
 ---
 
-# Midnight
+# RetEx: Midnight hackathon
 
 Midnight was a 4-day hackathon held in Vienna from January 4th to 8th, organized by Hack Club. It featured an immersive storyline centered around a mysterious murder involving Aunt Bethesda, where participants had to uncover the culprit by building two technical projects.
 

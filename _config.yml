@@ -44,4 +44,4 @@ plugins:
   - jekyll-environment-variables
   - jekyll-feed
   - jekyll-hackclub
-  
+  - jekyll-minifier

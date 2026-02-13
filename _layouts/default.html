@@ -9,6 +9,22 @@
     <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}" />
     <link rel="preload" href="https://luke.hsiao.dev/fonts/Berkeley Mono Variable.woff2" as="font" type="font/woff2" crossorigin="">
     <script defer src="https://use.fontawesome.com/releases/v7.0.1/js/all.js"></script>
+
+    <meta property="og:site_name" content="{{ site.title }}" />
+    {% if page.title %}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    {% else %}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ site.title }}" />
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 200 }}" />
+    {% else %}
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %}
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ '/assets/opengraph.jpg' | absolute_url }}" />
 </head>
 <body>
     <header>

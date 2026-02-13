@@ -18,11 +18,23 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ site.title }}" />
     {% endif %}
+
     {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 200 }}" />
     {% else %}
     <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
+
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema  }}" />
+    {% endif %}
+
+    {% if page.tags %}
+        {% for tag in page.tags %}
+            <meta property="article:tag" content="{{ tag }}" />
+        {% endfor %}
+    {% endif %}
+
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:image" content="{{ '/assets/opengraph.jpg' | absolute_url }}" />
 </head>

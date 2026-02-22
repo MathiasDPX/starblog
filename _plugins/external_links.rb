@@ -34,7 +34,7 @@ require 'uri'
         #  - protocol-less like //localhost:4000
         #  - absolute with host matching localhost, 127.0.0.1, or 192.168.x.x (ports ignored)
         is_local = false
-        if href.start_with?('/', '#')
+        if href.start_with?('/', '#', '.')
           is_local = true
         else
           # try to extract host (safe parse)

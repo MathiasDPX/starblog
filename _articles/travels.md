@@ -24,6 +24,9 @@ tags:
 
 <div id="map"></div>
 
+<br>
+Read [Midnight article](../midnight)
+
 <script type="module">
 import L, {Map, TileLayer, Marker, FeatureGroup, LatLngBounds, LatLng } from 'leaflet';
 import { Icon, ChipDiamondPanel, createElement } from 'leaflet-extra-marker';
@@ -57,13 +60,13 @@ class Airport {
 
     createPopup() {
         const description = this.description ? `<p class="half"></p>${this.description}` : '';
-        return `${this.country} ${this.name}${description}`;
+        return `${this.country} <b>${this.name}</b>${description}`;
     }
 }
 
 const airports = [
     new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.4478989, -4.41854]),
-    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970], '<a href="https://midnight.hackclub.com/">Midnight</a>'),
+    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.1102980, 16.56970], 'In January 2026 for <a href="https://midnight.hackclub.com/">Midnight</a>'),
     new Airport("🇲🇶", "Martinique Aimé Césaire International", "FDF", [14.5909996, -61.0032005]),
     new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.0127983, 2.55]),
     new Airport("🇭🇺", "Budapest Ferenc Liszt International Airport", "BUD", [47.4369011, 19.2556]),

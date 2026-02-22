@@ -1,0 +1,25 @@
+# currently disabled but just in case i want to add it
+
+require 'uri'
+
+[:documents, :pages].each do |hook|
+  Jekyll::Hooks.register hook, :post_render do |item|
+    next unless item.output_ext == ".html"
+    content  = item.output
+    site_url = item.site.config['url'].to_s.sub(%r{\Ahttps?://}, '')
+
+    content.gsub!(%r{<a\b([^>]*?)\bhref=(["'])([^"'>]+)\2([^>]*)>}i) do
+      pre_attrs  = $1
+      quote      = $2
+      href       = $3
+      post_attrs = $4
+      
+      next unless href.start_with?("http")
+      
+      separator = href.include?('?') ? '&' : '?'
+      modified_href = "#{href}#{separator}rel=mathiasd.fr"
+      %Q{<a#{pre_attrs} href=#{quote}#{modified_href}#{quote}#{post_attrs}>}
+    end
+  end
+end
+

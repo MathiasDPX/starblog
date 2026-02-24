@@ -6,7 +6,7 @@ excerpt: "Around the world around the world"
 
 # Ships
 
-This is an extended list of ships on the [home page](../)
+This is an extended list of ships
 
 <br>
 ## Votes Update {#votesupdate}
@@ -16,7 +16,7 @@ _Votes Update's screenshot_
 
 _Made for [HackCraft](https://hackcraft.hackclub.com/) / [Source code](https://github.com/MathiasDPX/VoteUpdate) / [Modrinth](https://modrinth.com/plugin/voteupdate)_
 
-Plugin made to bring [23w13a_or_b](https://minecraft.wiki/w/Java_Edition_23w13a_or_b) Minecraft version features to newer versions. It currently has 31 votes availables and ItemsAdder support
+A plugin that brings [23w13a_or_b](https://minecraft.wiki/w/Java_Edition_23w13a_or_b) Minecraft version features to newer releases. It includes 31 custom votes and ItemsAdder support.
 
 
 <br>
@@ -27,7 +27,7 @@ _onedrive-proxy's screenshot_
 
 _Shipped to [Midnight](http://midnight.hackclub.com/) / [Source code](https://github.com/MathiasDPX/onedrive-proxy)_
 
-OneDrive Proxy is a proxy service that allows you to make OneDrive file downloads available without requiring users to sign in with a Microsoft account. It also a contains a dropbox for easy file upload
+A proxy service that enables secure OneDrive file sharing without requiring users to sign in with a Microsoft account. It also includes an integrated file upload dropbox for easy transfers.
 
 
 <br>
@@ -38,7 +38,7 @@ _aseprite-bin's screenshot_
 
 _Shipped to [Midnight](http://midnight.hackclub.com/) / [Source code](https://github.com/MathiasDPX/aseprite-bin) / [Demo](https://mathiasdpx.github.io/aseprite-bin/)_
 
-aseprite-bin automatically build the latest Aseprite version for Linux, Windows and MacOS from source code every day at 9pm for you to download for free.
+An automated build system that compiles the latest Aseprite version daily at 9pm for Linux, Windows, and macOS, available for free download.
 
 
 <br>
@@ -49,7 +49,7 @@ _gobook's screenshot_
 
 _Made for [Dummies](https://dummies.hackclub.com/) / [Source code](https://github.com/MathiasDPX/gobook) / [Demo](https://mathiasdpx.github.io/gobook/)_
 
-[mdBook](https://github.com/rust-lang/mdBook) clone made in Golang. It was my first project made in Golang, using gomarkdown and cobra.
+A [mdBook](https://github.com/rust-lang/mdBook) clone built in Go using gomarkdown and cobra. This was my first Go project.
 
 
 <br>
@@ -60,7 +60,7 @@ _jekyll-codetheme's screenshot_
 
 _Made for [Tonic](https://tonic.hackclub.com/) / [Source code](https://github.com/MathiasDPX/jekyll-codetheme) / [Demo](https://mathiasdpx.github.io/jekyll-codetheme/)_
 
-Codetheme is a theme that aims to recreate VSCode by using the same fonts, color palette, and style. It also supports code highlighting and blockquotes.
+A Jekyll theme that recreates the vscode aesthetic with matching fonts, color palettes, and styling. Features include syntax highlighting and styled blockquotes for enhanced readability.
 
 
 <br>
@@ -71,4 +71,26 @@ _jekyll-hackclub's screenshot_
 
 _[Source code](https://github.com/MathiasDPX/jekyll-hackclub) / [Demo](https://mathiasdpx.github.io/jekyll-hackclub/) / [RubyGems](https://rubygems.org/gems/jekyll-hackclub)_
 
-Made while waiting for Tonic's orgs to start review, it's a Jekyll plugin that resolve Slack IDs to links, 
+A Jekyll plugin that converts Slack IDs to links, replaces emojis with images, and provides additional Slack-to-web integration features.
+
+
+<br>
+## match-my-shader {#match-my-shader}
+
+![match-my-shader's screenshot](https://ships.hackclub.com/api/v1/screenshots/recR0fQAxmZjvxQoH)
+_match-my-shader's screenshot_
+
+_[Source code](https://github.com/MathiasDPX/match-my-shader) / [Itch](https://mathiasdpx.itch.io/match-my-shader)_
+
+A coding puzzle game where you write Python shaders to match target visuals. Built in 10 days for the "Timeless" game jam, it combines programming challenges with creative visual problem-solving.
+
+
+<br>
+## GH-DOOM64
+
+![GH-DOOM64's screenshot](https://img.youtube.com/vi/OPmpIwJ8uDY/maxresdefault.jpg)
+_GH-DOOM64's screenshot_
+
+_[Source code](https://github.com/GH-DOOM/DOOM64) / [Demo](https://www.youtube.com/watch?v=OPmpIwJ8uDY) / [canitrundoom.org](https://canitrundoom.org/entries?id=1047)_
+
+DOOM64 rendered as a GitHub contribution graph visualization.

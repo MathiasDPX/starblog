@@ -198,6 +198,22 @@ const nodeData = [
       tooltip: "Ports: 6117/tcp"
     },
 
+    { key: "exposing", text: "Exposure", isGroup: true, group: "caterpillar" },
+    {
+      key: "cloudflared",
+      group: "exposing",
+      name: "Cloudflared",
+      desc: "Cloudflare Tunnel",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cloudflare.png",
+    },
+    {
+      key: "tailscale",
+      group: "exposing",
+      name: "Tailscale",
+      desc: "Mesh VPN",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tailscale.png"
+    },
+
     {
       key: "qbittorrent",
       group: "caterpillar",
@@ -247,20 +263,6 @@ const nodeData = [
       tooltip: "Ports: 9858/tcp"
     },
     {
-      key: "cloudflared",
-      group: "caterpillar",
-      name: "Cloudflared",
-      desc: "Cloudflare Tunnel",
-      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cloudflare.png",
-    },
-    {
-      key: "tailscale",
-      group: "caterpillar",
-      name: "Tailscale",
-      desc: "Mesh VPN",
-      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tailscale.png"
-    },
-    {
       key: "onedrive-proxy",
       group: "caterpillar",
       name: "onedrive-proxy",
@@ -275,7 +277,7 @@ const nodeData = [
       desc: "Jekyll plugin for HackClub",
       iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png",
       tooltip: "Ports: 10511/tcp"
-    }
+    },
 ];
 
 nodeData.forEach(n => { if (!n.isGroup && n.tooltip === undefined) n.tooltip = "no ports exposed"; });

@@ -5,15 +5,11 @@ excerpt: "Homelab interactive diagram"
 slug: homelab
 ---
 
-{% if jekyll.environment == "production" %}
-  <script src="https://gojs.net/latest/release/go.js"></script>
-{% else %}
-  <script src="https://cdn.jsdelivr.net/npm/gojs/release/go-debug.js"></script>
-{% endif %}
+<script src="https://gojs.net/latest/release/go.js"></script>
 
 # Homelab
 
-<div id="labDiagramDiv" style="background-color: #DAE4E4;"></div>
+<div id="labDiagramDiv"></div>
 
 <script>
 const $ = go.GraphObject.make;
@@ -142,57 +138,106 @@ diagram.groupTemplate = $(
 diagram.model = new go.GraphLinksModel(
   [
     { key: "caterpillar", text: "Caterpillar", isGroup: true },
+
     { key: "metrics", text: "Metrics", isGroup: true, group: "caterpillar" },
+    {
+      key: "qbittorrent-exporter",
+      group: "metrics",
+      name: "qBittorrent exporter",
+      desc: "Prometheus exporter for qBittorrent",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
+    },
+    {
+      key: "prometheus",
+      group: "metrics",
+      name: "Prometheus",
+      desc: "Monitoring system & time series database",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prometheus.png"
+    },
+    {
+      key: "grafana",
+      group: "metrics",
+      name: "Grafana",
+      desc: "Analytics & Monitoring",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/grafana.png"
+    },
+    {
+      key: "flavortown-exporter",
+      group: "metrics",
+      name: "Flavortown exporter",
+      desc: "Prometheus exporter for HackClub Flavortown",
+      iconSrc: "https://www.genroam.io/flavourtown/sticker.webp"
+    },
 
     {
-        key: "qbittorrent-exporter",
-        group: "metrics",
-        name: "qBittorrent exporter",
-        desc: "Prometheus exporter for qBittorrent",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
+      key: "qbittorrent",
+      group: "caterpillar",
+      name: "qBittorrent",
+      desc: "BitTorrent client",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
     },
     {
-        key: "prometheus",
-        group: "metrics",
-        name: "Prometheus",
-        desc: "Monitoring system & time series database",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prometheus.png"
+      key: "vaultwarden",
+      group: "caterpillar",
+      name: "Vaultwarden",
+      desc: "Password manager",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vaultwarden.png"
     },
     {
-        key: "grafana",
-        group: "metrics",
-        name: "Grafana",
-        desc: "Analytics & Monitoring",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/grafana.png"
+      key: "freshrss",
+      group: "caterpillar",
+      name: "FreshRSS",
+      desc: "Feeds aggregator",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/freshrss.png"
     },
     {
-        key: "flavortown-exporter",
-        group: "metrics",
-        name: "Flavortown exporter",
-        desc: "Prometheus exporter for HackClub Flavortown",
-        iconSrc: "https://www.genroam.io/flavourtown/sticker.webp"
-    },
-
-    {
-        key: "qbittorrent",
-        group: "caterpillar",
-        name: "qBittorrent",
-        desc: "BitTorrent client",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
+      key: "komga",
+      group: "caterpillar",
+      name: "Komga",
+      desc: "Comics/Mangas media server",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komga.png"
     },
     {
-        key: "vaultwarden",
-        group: "caterpillar",
-        name: "Vaultwarden",
-        desc: "Password manager",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vaultwarden.png"
+      key: "glance",
+      group: "caterpillar",
+      name: "Glance",
+      desc: "Generic dashboard",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/glance.png"
     },
     {
-        key: "freshrss",
-        group: "caterpillar",
-        name: "FreshRSS",
-        desc: "Feeds aggregator",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/freshrss.png"
+      key: "wakamitm",
+      group: "caterpillar",
+      name: "WakaMITM",
+      desc: "Wakatime middleware",
+      iconSrc: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/wakatime.png"
+    },
+    {
+      key: "cloudflared",
+      group: "caterpillar",
+      name: "Cloudflared",
+      desc: "Cloudflare Tunnel",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cloudflare.png"
+    },
+    {
+      key: "tailscale",
+      group: "caterpillar",
+      name: "Tailscale",
+      desc: "Mesh VPN",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tailscale.png"
+    },
+    {
+      key: "onedrive-proxy",
+      group: "caterpillar",
+      name: "onedrive-proxy",
+      desc: "Files hosting",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/microsoft-onedrive.png"
+    },
+    {
+      key: "jekyll-hackclub",
+      group: "caterpillar",
+      name: "jekyll-hackclub",
+      desc: "Jekyll plugin for HackClub",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png"
     }
   ]
 );

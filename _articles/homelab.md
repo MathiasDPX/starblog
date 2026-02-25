@@ -13,14 +13,15 @@ slug: homelab
 
 # Homelab
 
-<div id="labDiagramDiv"
-     style="width:100%; height:450px; background-color: #DAE4E4;"></div>
+<div id="labDiagramDiv" style="background-color: #DAE4E4;"></div>
 
 <script>
 const $ = go.GraphObject.make;
 
 const diagram = $(go.Diagram, "labDiagramDiv", {
-  "undoManager.isEnabled": true
+  "undoManager.isEnabled": true,
+  allowMove: false,
+  allowDelete: false
 });
 
 class ThreeColumnLayout extends go.Layout {
@@ -86,6 +87,7 @@ const groupLayout = new ThreeColumnLayout();
 diagram.nodeTemplate = $(
   go.Node,
   "Auto",
+  { movable: false, deletable: false, selectable: false },
   $(go.Shape, "RoundedRectangle", {
     fill: "#FFFFFF",
     stroke: "#6B7C7C",
@@ -117,7 +119,10 @@ diagram.groupTemplate = $(
   go.Group,
   "Auto",
   {
-    layout: groupLayout
+    layout: groupLayout,
+    movable: false,
+    deletable: false,
+    selectable: false
   },
   $(go.Shape, "RoundedRectangle", {
     fill: "#E6F0F0",

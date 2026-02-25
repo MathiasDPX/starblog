@@ -5,7 +5,7 @@ excerpt: "Homelab interactive diagram"
 slug: homelab
 ---
 
-<script src="https://gojs.net/latest/release/go.js"></script>
+<script src="https://w.mathiasd.fr/go.js"></script>
 
 # Homelab
 

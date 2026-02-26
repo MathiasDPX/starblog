@@ -44,6 +44,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: site-build
+          path: _site
+          retention-days: 30
+
   # Deployment job
   deploy:
     environment:

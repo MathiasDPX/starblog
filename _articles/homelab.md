@@ -147,14 +147,14 @@ diagram.groupTemplate = $(
     selectable: false
   },
   $(go.Shape, "RoundedRectangle", {
-    fill: "#E6F0F0",
-    stroke: "#6B7C7C",
+    fill: "#131a24",
+    stroke: "#c5c5c5",
     strokeWidth: 2
   }),
   $(go.Panel, "Vertical", { margin: 10 },
     $(go.TextBlock, {
       font: "bold 14px sans-serif",
-      stroke: "#2E3A3A",
+      stroke: "#ffffff",
       alignment: go.Spot.Left
     }, new go.Binding("text", "text")),
     $(go.Placeholder, { padding: new go.Margin(10, 8, 8, 8) })

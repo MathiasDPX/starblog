@@ -3,8 +3,8 @@ layout: default
 ---
 # Hi, I'm Mathias
 
-I'm bad at writing but want to write blogposts anyways, I currently live near [Brest](https://www.google.com/maps/search/Brest)<br>
-I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start)
+I'm bad at writing but want to write blogposts anyways, I currently live near [Brest](https://www.google.com/maps/search/Brest)
+I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start). You can see my homelab on my [Homelab]({{ '/p/homelab/' | relative_url }}) article
 
 Here's some projects I'm proud of:
 

@@ -278,6 +278,14 @@ const nodeData = [
       iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png",
       tooltip: "Ports: 10511/tcp"
     },
+    {
+      key: "navidrome",
+      group: "caterpillar",
+      name: "Navidrome",
+      desc: "Music server and streamer",
+      iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/navidrome.webp",
+      tooltip: "Ports: 4533/tcp"
+    },
 ];
 
 nodeData.forEach(n => { if (!n.isGroup && n.tooltip === undefined) n.tooltip = "no ports exposed"; });

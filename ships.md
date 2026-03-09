@@ -2,6 +2,7 @@
 layout: post
 title: "Ships"
 excerpt: "Around the world around the world"
+permalink: /ships/
 ---
 
 # Ships

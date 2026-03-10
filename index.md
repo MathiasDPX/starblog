@@ -76,7 +76,7 @@ span#listening img {
             return;
         }
 
-        listeningElem.innerHTML = `<img src="./assets/music-notes.svg"> Listening to ${data?.['name']} by ${data?.['artist']}`;
+        listeningElem.innerHTML = `<img src="./assets/music-notes.svg"> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
     } catch (error) {
         console.error("Error while fetching music", error);
         listeningElem.remove();

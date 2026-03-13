@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-* a {
+a {
     color: #8cc2dd;
 }
 
@@ -107,6 +107,10 @@ main {
             display: block;
             padding-top: 0.4em;
             width: 100%;
+
+            a {
+                color: #cecece;
+            }
         }
     }
 

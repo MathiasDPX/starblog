@@ -11,7 +11,7 @@ I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://
 Here's some projects I'm proud of: 
 
 > ## jekyll-hackclub
-> ![jekyll-hackclub icon](https://i.ibb.co/Q7BqnHy4/jekyll-hackclub.png)
+> ![jekyll-hackclub icon](https://user-cdn.hackclub-assets.com/019ceba9-6b52-7152-b613-710625bbebda/jekyll-hackclub.png)
 >
 > Jekyll plugin to mention Slack users or channels. You can also query users.info api endpoints to retrieve raw informations like userid or avatar. It also add an Slack emoji resolver
 > 

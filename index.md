@@ -29,7 +29,7 @@ Here's some projects I'm proud of:
 
 
 > ## CinéBrest
-> ![CinéBrest favicon](https://raw.githubusercontent.com/MathiasDPX/MathiasDPX/main/assets/cinebrest.png)
+> ![CinéBrest favicon](https://raw.githubusercontent.com/MathiasDPX/grainParisArt/refs/heads/brest/static/images/icon.png)
 >
 > A platform that group all Brest cinema schedules on one page, offering real-time updates and a user-friendly design for effortless movie planning.
 > Forked and heavily optimized from [grainParisArt](https://github.com/solene-drnx/grainParisArt-Public)

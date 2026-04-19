@@ -10,6 +10,14 @@ I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://
 
 Here's some projects I'm proud of: 
 
+> ## ArchiveTube
+> ![ArchiveTube icon](https://raw.githubusercontent.com/MathiasDPX/archivetube/refs/heads/main/web/static/favicon.svg)
+>
+> yt-dlp frontend for full YouTube archive. Archive the thumbnail, description, subtitles and everything; with OIDC support, Prometheus exporter
+> 
+> [GitHub](https://github.com/MathiasDPX/archivetube) [Demo](https://yt.mathiasd.fr/)
+{: type="project" style="border-left-color: #FF0033"}
+
 > ## jekyll-hackclub
 > ![jekyll-hackclub icon](https://user-cdn.hackclub-assets.com/019ceba9-6b52-7152-b613-710625bbebda/jekyll-hackclub.png)
 >

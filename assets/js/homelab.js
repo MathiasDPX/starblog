@@ -11,11 +11,11 @@ function makeTooltipAdornment() {
         $(go.Panel, "Horizontal", { margin: 8 },
             $(go.TextBlock, {
                 font: "bold 11px sans-serif",
-                stroke: "#E0ECEC"
+                stroke: "#ECECEC"
             }, new go.Binding("text", "tooltip", t => t && t.includes(":") ? t.split(":")[0] + ":" : "")),
             $(go.TextBlock, {
                 font: "11px sans-serif",
-                stroke: "#A0B0B0",
+                stroke: "#ECECEC",
                 margin: new go.Margin(0, 0, 0, 4),
                 maxSize: new go.Size(180, NaN),
                 wrap: go.TextBlock.WrapFit
@@ -140,11 +140,11 @@ diagram.nodeTemplate = $(
         $(go.Panel, "Vertical", { margin: new go.Margin(0, 0, 0, 8) },
             $(go.TextBlock, {
                 font: "bold 12px sans-serif",
-                stroke: "#2E3A3A"
+                stroke: "#3b3b3b"
             }, new go.Binding("text", "name")),
             $(go.TextBlock, {
                 font: "11px sans-serif",
-                stroke: "#4E5A5A",
+                stroke: "#595959",
                 maxSize: new go.Size(160, NaN),
                 wrap: go.TextBlock.WrapFit
             }, new go.Binding("text", "desc"))

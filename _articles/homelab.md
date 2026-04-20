@@ -11,4 +11,4 @@ slug: homelab
 
 <div id="labDiagramDiv"></div>
 
-<script src="/assets/js/homelab.js">
+<script src="/assets/js/homelab.js"></script>

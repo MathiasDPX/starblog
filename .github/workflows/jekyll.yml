@@ -40,7 +40,7 @@ jobs:
         uses: mfinelli/setup-imagemagick@v7
 
       - name: Optimize JPEG
-        run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -strip -interlace plane -quality 85 {} +
+        run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -strip -interlace plane {} +
         continue-on-error: true
 
       - name: Build with Jekyll

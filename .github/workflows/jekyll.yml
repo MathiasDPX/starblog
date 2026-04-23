@@ -39,8 +39,8 @@ jobs:
       - name: Setup ImageMagick
         uses: mfinelli/setup-imagemagick@v7
 
-      - name: Convert JPEG to Progressive JPEG
-        run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -interlace plane {} +
+      - name: Optimize JPEG
+        run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -strip -interlace plane -quality 85 {} +
         continue-on-error: true
 
       - name: Build with Jekyll

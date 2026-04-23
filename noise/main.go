@@ -3,7 +3,7 @@ package main
 import (
 	"image"
 	"image/color"
-	"image/png"
+	"image/jpeg"
 	"os"
 
 	"github.com/MathiasDPX/starblog/fastnoise"
@@ -40,20 +40,17 @@ func main() {
 	warp.Seed = 1337
 	warp.Frequency = 0.010
 
-	// Create image
+	// Create image (RGBA OK même pour JPEG)
 	img := image.NewRGBA(image.Rect(0, 0, width, height))
 
 	// Generate noise
 	for y := 0; y < height; y++ {
 		for x := 0; x < width; x++ {
-			// Apply domain warp
 			wx, wy := warp.DomainWarp2D(float64(x)/scale, float64(y)/scale)
 
-			// Normalize noise value
 			value := noise.GetNoise2D(wx, wy)
 			brightness := uint8((value + 1) * 0.5 * 255)
 
-			// Apply alpha blending
 			alpha := (float64(brightness) / 255.0) * 0.2
 
 			nr := uint8(float64(backgroundColor.R)*(1-alpha) + float64(brightness)*alpha)
@@ -64,14 +61,15 @@ func main() {
 		}
 	}
 
-	// Save to file
-	f, err := os.Create("../assets/background.png")
+	f, err := os.Create("../assets/images/background.jpg")
 	if err != nil {
 		panic(err)
 	}
 	defer f.Close()
 
-	if err := png.Encode(f, img); err != nil {
+	opts := &jpeg.Options{Quality: 95}
+
+	if err := jpeg.Encode(f, img, opts); err != nil {
 		panic(err)
 	}
 }

@@ -34,7 +34,7 @@ sass:
   style: compressed
 
 feed:
-  icon: /assets/favicon.png
+  icon: /assets/favicon.svg
   path: ""
   excerpt_only: true
   collections:

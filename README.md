@@ -4,7 +4,7 @@ Personal blog based on [bearblog](https://bearblog.dev) but static using Jekyll
 
 ## generate assets
 
-The `noise/` directory contains a small Go program that generates `assets/background.png`.
+The `noise/` directory contains a small Go program that generates `assets/images/background.jpg`.
 
 ```bash
 cd noise

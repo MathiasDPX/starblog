@@ -2,8 +2,8 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["main"]
-    
+    branches: [ "main" ]
+
   workflow_dispatch:
 
 permissions:
@@ -22,25 +22,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.302.0
         with:
-          ruby-version: '3.4.7'
+          ruby-version: "3.4.7"
           bundler-cache: true
           cache-version: 1
         env:
           BUNDLE_FROZEN: false
-          
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
-        
+
+      - name: Setup ImageMagick
+        uses: mfinelli/setup-imagemagick@v7
+
+      - name: Convert JPEG to Progressive JPEG
+        run: magick mogrify -interlace plane ./assets/images/*.jpg
+        continue-on-error: true
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
           JEKYLL_COMMIT_SHA: ${{ github.sha }}
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
 

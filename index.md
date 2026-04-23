@@ -6,12 +6,12 @@ layout: default
 I'm bad at writing but want to write blogposts anyways, I currently live near [Brest](https://www.google.com/maps/search/Brest).
 I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start). You can see my homelab on my [Homelab]({{ '/p/homelab/' | relative_url }}) article
 
-<span id="listening"><img src="./assets/music-notes.svg"> Listening to...</span>
+<span id="listening"><img src="./assets/images/music-notes.svg"> Listening to...</span>
 
 Here's some projects I'm proud of: 
 
 > ## ArchiveTube
-> ![ArchiveTube icon](https://raw.githubusercontent.com/MathiasDPX/archivetube/refs/heads/main/web/static/favicon.svg)
+> ![ArchiveTube icon](./assets/images/projects/archivetube.svg)
 >
 > yt-dlp frontend for full YouTube archive. Archive the thumbnail, description, subtitles and everything; with OIDC support, Prometheus exporter
 > 
@@ -19,7 +19,7 @@ Here's some projects I'm proud of:
 {: type="project" style="border-left-color: #FF0033"}
 
 > ## jekyll-hackclub
-> ![jekyll-hackclub icon](https://user-cdn.hackclub-assets.com/019ceba9-6b52-7152-b613-710625bbebda/jekyll-hackclub.png)
+> ![jekyll-hackclub icon](./assets/images/projects/jekyll-hackclub.svg)
 >
 > Jekyll plugin to mention Slack users or channels. You can also query users.info api endpoints to retrieve raw informations like userid or avatar. It also add an Slack emoji resolver
 > 
@@ -28,7 +28,7 @@ Here's some projects I'm proud of:
 
 
 > ## GH-DOOM
-> ![GH-DOOM's profile picture](https://avatars.githubusercontent.com/u/187232905?v=4)
+> ![GH-DOOM's profile picture](./assets/images/projects/gh-doom.jpg)
 >
 > Play DOOM64 through GitHub contributions graph. It take a screenshot of the game, resize it and display it on the graph through Selenium and repeat as fast as possible
 > 
@@ -37,7 +37,7 @@ Here's some projects I'm proud of:
 
 
 > ## CinéBrest
-> ![CinéBrest favicon](https://raw.githubusercontent.com/MathiasDPX/grainParisArt/refs/heads/brest/static/images/icon.png)
+> ![CinéBrest favicon](./assets/images/projects/cinebrest.svg)
 >
 > A platform that group all Brest cinema schedules on one page, offering real-time updates and a user-friendly design for effortless movie planning.
 > Forked and heavily optimized from [grainParisArt](https://github.com/solene-drnx/grainParisArt-Public)
@@ -46,7 +46,7 @@ Here's some projects I'm proud of:
 {: type="project" style="border-left-color: "#444CF7"}
 
 > ## Babarcode
-> ![Babarcode thumbnail](https://github.com/MathiasDPX/Babarcode/raw/main/images/babarcode.png)
+> ![Babarcode thumbnail](./assets/images/projects/babarcode.jpg)
 >
 > Play Minecraft with a barcode reader, it read input sent by the reader and press the associated keys from a dictionnary. It is survival-friendly by having toggle keys for eating and breaking blocks however you need the mouse to move the camera around
 >
@@ -84,7 +84,7 @@ span#listening img {
             return;
         }
 
-        listeningElem.innerHTML = `<img src="./assets/music-notes.svg"> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
+        listeningElem.innerHTML = `<img src="./assets/images/music-notes.svg"> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
     } catch (error) {
         console.error("Error while fetching music", error);
         listeningElem.remove();

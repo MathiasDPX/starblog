@@ -30,7 +30,7 @@ tags:
 }
 </style>
 
-# <img class="title" src="https://emoji.slack-edge.com/T09V59WQY1E/50days/e35ee9bec8dfa875.png">50 Days
+# <img class="title" src="/assets/images/50days.jpg">50 Days
 
 <div id="progress-bar">
     <div id="progress">??%</div>

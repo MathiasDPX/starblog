@@ -40,7 +40,7 @@ jobs:
         uses: mfinelli/setup-imagemagick@v7
 
       - name: Convert JPEG to Progressive JPEG
-        run: magick mogrify -interlace plane ./assets/images/*.jpg
+        run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -interlace plane {} +
         continue-on-error: true
 
       - name: Build with Jekyll

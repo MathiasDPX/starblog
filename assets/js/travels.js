@@ -39,9 +39,9 @@ class Airport {
 // Airport data from https://airport-data.com/
 const airports = [
     new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.447911, -4.418539]),
-    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.110278, 16.569722], 'In January 2026 for <a href="https://midnight.hackclub.com/">Midnight</a>'),
+    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.110278, 16.569722], 'In January 2026 for <a href="https://midnight.hackclub.com/" target="_blank">Midnight</a>'),
     new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.012779, 2.55]),
-    new Airport("🇺🇸", "John F Kennedy International", "JFK", [40.639751, -73.778926], 'In May 2026 for <a href="https://game.hackclub.com/">Hack Club : The Game</a>'),
+    new Airport("🇺🇸", "John F Kennedy International", "JFK", [40.639751, -73.778926], 'In May 2026 for <a href="https://game.hackclub.com/" target="_blank">Hack Club : The Game</a>'),
 ];
 
 const airportsSmall = new FeatureGroup();

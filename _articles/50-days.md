@@ -8,52 +8,7 @@ tags:
 - hackclub
 ---
 
-<style>
-#progress-bar {
-    min-width: 100%;
-    height: 1em;
-    margin-bottom: 1em;
-    margin-top: -0.5em;
-    border-radius: 4px;
-    overflow: hidden;          
-    background-color: #f0ffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-}
-
-#progress {
-    min-height: 100%;
-    font-family: "Berkeley Mono",Iosevka,Hack,Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace;
-    font-size: 0.8em;
-    text-align: center;
-    color: #000000;
-    background-color: #97c228;
-}
-</style>
-
 # <img class="title" src="/assets/images/50days.jpg">50 Days
-
-<div id="progress-bar">
-    <div id="progress">??%</div>
-</div>
-
-<script>
-// Auto-update progress bar
-(function () {
-    const startDate = new Date("2025-11-11");
-    const totalDays = 50;
-
-    const today = new Date();
-    const elapsedMs = today - startDate;
-    const elapsedDays = Math.floor(elapsedMs / (1000 * 60 * 60 * 24));
-
-    const progress = Math.min(Math.max(elapsedDays / totalDays, 0), 1);
-    const percent = Math.round(progress * 100);
-
-    const bar = document.getElementById("progress");
-    bar.style.width = percent + "%";
-    bar.textContent = percent + "%";
-})();
-</script>
 
 50 Days is a HackClub event running on November 11th, 2025 -- 50 days before 2026 --. The idea is simple: participants share a list of goals they want to accomplish before the end of the year, then post daily updates for the next 50 days. There are no prizes; the reward is the productivity you (hopefully) maintain.
 

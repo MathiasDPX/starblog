@@ -1,6 +1,11 @@
 ---
 ---
 
+body.remove-scrolling {
+    height: 100%; 
+    overflow: hidden; 
+}
+
 #lightbox {
     width: 100%;
     height: 100%;

@@ -4,10 +4,6 @@
 // - Remove gallery
 // - Change logic (all images to images with lightbox-image class)
 
-function is_imagelink(url) {
-    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
-    return (url.match(p)) ? true : false;
-}
 
 function setGallery(el) {
     var elements = document.body.querySelectorAll(".gallery");
@@ -27,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('lightbox').addEventListener("click", function(event) {
         this.innerHTML = '';
         document.getElementById('lightbox').style.display = 'none';
+
+        // reenable scrolling
+        document.body.classList.remove("remove-scrolling");
     });
 
     //add the image lightbox on click
@@ -34,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => {
         element.addEventListener("click", function(event) {
             event.preventDefault();
-            document.getElementById('lightbox').innerHTML = '<a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+this.getAttribute('src')+'\') center center / contain no-repeat;" title="'+this.getAttribute('alt')+'" ><img src="'+this.getAttribute('src')+'" alt="'+this.getAttribute('alt')+'" /></div><span>'+this.getAttribute('alt')+'</span>';
+            document.getElementById('lightbox').innerHTML = '<div class="img" style="background: url(\''+this.getAttribute('src')+'\') center center / contain no-repeat;" title="'+this.getAttribute('alt')+'" ><img src="'+this.getAttribute('src')+'" alt="'+this.getAttribute('alt')+'" /></div><span>'+this.getAttribute('alt')+'</span>';
             document.getElementById('lightbox').style.display = 'block';
+
+            // disable scroll
+            document.body.classList.add("remove-scrolling"); 
 
             setGallery(this);
         });

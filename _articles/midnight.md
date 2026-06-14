@@ -28,14 +28,14 @@ Here's a short recap of all my projects:
 
 ## The Mission
 
-![A theater screen showing a body's chalk outline on a red background](https://cdn.hackclub.com/019c529f-78fc-7b85-aae2-b97673e5b50d/midnight-opening-ceremony.jpg)
+![A theater screen showing a body's chalk outline on a red background](https://cdn.hackclub.com/019c529f-78fc-7b85-aae2-b97673e5b50d/midnight-opening-ceremony.jpg){:.lightbox-image}
 _Photo by [Hashikono Tham](https://github.com/Hashikono)<br>_
 
 "Someone is plotting to kill Aunt Bethesda, and we've been invited to Vienna to try to stop it." For this, we had to code 2 technical projects and show them to the task force (organizing team) to gain points (stickers) that we could then use to get clues from suspects. We also win merch after reaching some milestones: a lanyard for coming to Midnight, stickers after showcasing our ideas, keychains for shipping our first project, a tote bag for the second, and finally a hoodie for having ten points.
 
 ## 1^st^ project: CaseMate
 
-![Casemate frontend](https://cdn.hackclub.com/019c529f-458b-74f8-9eb3-2c7333b0986e/midnight-casemate.jpeg)
+![Casemate frontend](https://cdn.hackclub.com/019c529f-458b-74f8-9eb3-2c7333b0986e/midnight-casemate.jpeg){:.lightbox-image}
 *Casemate frontend*
 
 Our first app was a case tracking app where you could put every piece of information you knew about the case (suspects, evidence, testimonies, etc...) and during your investigation, you would be assisted by Benoit Blanc from [Knives Out](https://letterboxd.com/film/knives-out-2019/).
@@ -55,7 +55,7 @@ You can find Casemate source code on [`DjukicAleksej/aidetective`](https://githu
 
 ## 2^nd^ project: Saber Strike
 
-![Screenshot of Saber Strike](https://cdn.hackclub.com/019c52b2-3d81-7322-a48e-d6874838a975/midnight-saberstrike.jpg)
+![Screenshot of Saber Strike](https://cdn.hackclub.com/019c52b2-3d81-7322-a48e-d6874838a975/midnight-saberstrike.jpg){:.lightbox-image}
 _Screenshot of Saber Strike_
 
 Saber Strike is a browser-based rhythm game inspired by [Beat Saber](https://beatsaber.com/), but instead of controlling the sabers with controllers, sabers are controlled by hand movements using your camera.

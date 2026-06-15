@@ -98,7 +98,6 @@ GEM
     terser (1.2.6)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.6.0)
-    wdm (0.2.0)
     webrick (1.9.2)
 
 PLATFORMS
@@ -112,7 +111,6 @@ DEPENDENCIES
   jekyll-hackclub
   jekyll-minifier
   jekyll-tagging
-  wdm (>= 0.1.0)
   webrick
 
 BUNDLED WITH

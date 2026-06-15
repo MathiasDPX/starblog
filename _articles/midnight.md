@@ -2,6 +2,7 @@
 layout: post
 title: "RetEx: Midnight hackathon"
 excerpt: "4-day hackathon in Vienna"
+thumbnail: "/assets/images/midnight-opengraph.jpg"
 slug: midnight
 date: 2026-01-04
 tags:

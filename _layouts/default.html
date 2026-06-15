@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/code.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/lightbox.css' | relative_url }}">
@@ -13,9 +12,11 @@
 
     <meta property="og:site_name" content="{{ site.title }}" />
     {% if page.title %}
+    <title>{{ page.title }} ⫽ {{ site.title }}</title>
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title }}" />
     {% else %}
+    <title>{{ site.title }}</title>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ site.title }}" />
     {% endif %}
@@ -37,7 +38,12 @@
     {% endif %}
 
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:image" content="{{ '/assets/opengraph.jpg' | absolute_url }}" />
+
+    {% if page.thumbnail %}
+    <meta property="og:image" content="{{ page.thumbnail | absolute_url }}" />
+    {% else %}
+    <meta property="og:image" content="{{ '/assets/images/opengraph.jpg' | absolute_url }}" />
+    {% endif %}
 </head>
 <body>
     <header>

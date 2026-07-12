@@ -37,7 +37,7 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Setup ImageMagick
-        uses: mfinelli/setup-imagemagick@v7
+        uses: mfinelli/setup-imagemagick@v8
 
       - name: Optimize JPEG
         run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -strip -interlace plane {} +

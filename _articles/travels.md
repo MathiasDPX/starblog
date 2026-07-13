@@ -14,8 +14,7 @@ tags:
     {
         "imports": {
             "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
-            "leaflet-extra-marker": "https://unpkg.com/leaflet-extra-markers@latest/src/index.js",
-            "leaflet.geodesic": "https://cdn.jsdelivr.net/npm/leaflet.geodesic"
+            "leaflet-extra-marker": "https://unpkg.com/leaflet-extra-markers@latest/src/index.js"
         }
     }
 </script>

@@ -1,91 +1,91 @@
-import L, {Map, TileLayer, Marker, FeatureGroup, LatLngBounds, LatLng } from 'leaflet';
-import { Icon, ChipDiamondPanel, createElement } from 'leaflet-extra-marker';
-
-const plane_svg = '<svg class="map-icon" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M200 24c0-30.9 25.1-56 56-56s56 25.1 56 56l0 127.3 173.6 159.2c6.6 6.1 10.4 14.6 10.4 23.6l0 43.7c0 10.9-10.7 18.6-21.1 15.2l-162.9-54.3 0 99.7 66 52.8c3.8 3 6 7.6 6 12.5l0 19.8c0 10.4-9.8 18-19.9 15.5L256 512 147.9 539c-10.1 2.5-19.9-5.1-19.9-15.5l0-19.8c0-4.9 2.2-9.5 6-12.5l66-52.8 0-99.7-162.9 54.3C26.7 396.4 16 388.7 16 377.8l0-43.7c0-9 3.8-17.5 10.4-23.6L200 151.3 200 24z"></path></svg>';
-
-const bounds = new LatLngBounds(
-    new LatLng(-85, -180),
-    new LatLng(85, 180)
-);
+import L, { Map, TileLayer, Marker, FeatureGroup, LatLngBounds, LatLng } from 'leaflet';
+import { Icon, ChipDiamondPanel, createElement } from 'leaflet-extra-marker';
 
 const map = new Map('map', {
     center: [38, 0],
     zoom: 2.0,
-    maxBounds: bounds
+    zoomControl: false,
+    maxBounds: new LatLngBounds(
+        new LatLng(-85, -180),
+        new LatLng(85, 180)
+    )
 });
 
-new TileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
-	minZoom: 1,
-	maxZoom: 16,
-	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	ext: 'jpg'
+new TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    apikey: '6a53e8b25d114a5e9216df5bf9b5e9c8',
+    maxZoom: 16,
 }).addTo(map);
 
-class Airport {
-    constructor(country, name, code, location, description) {
-        this.country = country;
+class CustomMarker {
+    constructor(name, location, description, icon, color) {
         this.name = name;
-        this.code = code;
         this.location = location;
         this.description = description;
+        this.icon = icon;
+        this.color = color;
     }
 
     createPopup() {
         const description = this.description ? `<p class="half"></p>${this.description}` : '';
-        return `${this.country} <b>${this.name}</b>${description}`;
+        return `<b>${this.name}</b>${description}`;
+    }
+
+    render(scale) {
+        return new Marker(this.location, {
+            icon: new Icon({
+                contentHtml: this.icon,
+                color: this.color,
+                scale: scale,
+                svg: ChipDiamondPanel
+            }),
+        })
     }
 }
 
-// Airport data from https://airport-data.com/
-const airports = [
-    new Airport("🇫🇷", "Brest Bretagne Airport", "BES", [48.447911, -4.418539]),
-    new Airport("🇦🇹", "Vienna International Airport", "VIE", [48.110278, 16.569722], 'In January 2026 for <a href="https://midnight.hackclub.com/" target="_blank">Midnight</a>'),
-    new Airport("🇫🇷", "Charles De Gaulle International Airport", "CDG", [49.012779, 2.55]),
-    new Airport("🇺🇸", "John F Kennedy International", "JFK", [40.639751, -73.778926], 'In May 2026 for <a href="https://game.hackclub.com/" target="_blank">Hack Club : The Game</a>'),
+class HackClubMarker extends CustomMarker {
+    constructor(name, location, description) {
+        super(name, location, description, '<img class="map-icon" src="/assets/images/hackclub.svg">', "#EC3750")
+    }
+}
+
+function get_fa_icon(icon) {
+    return `<img class="map-icon" src="https://w.mathiasd.fr/fa?icon=${icon}">`
+}
+
+const markers = [
+    new HackClubMarker('🇦🇹 <a href="https://midnight.hackclub.com/" target="_blank">Midnight</a>', [48.110278, 16.569722], 'Murder mystery hackathon in January 2026 by Hack Club'),
+    new HackClubMarker('🇺🇸 <a href="https://game.hackclub.com/" target="_blank">Hack Club : The Game</a>', [40.639751, -73.778926], 'Scavenger hunt adventure game across Manhattan in May 2026 by Hack Club'),
+    new CustomMarker('<a href="https://nantesmakercampus.fr/" target="_blank">Nantes Maker Campus</a>', [47.205478, -1.564178], 'In July 2025/2026 with the <a href="https://mdl29.net/" target="_blank">Maison du Libre</a>', get_fa_icon("elephant"), "#C89B2E"),
+    new CustomMarker('<a href="https://unlockyourbrain.bzh/en/" target="_blank">Unlock Your Brain</a>', [48.388886, -4.484716], "In November 2024/2025", get_fa_icon("bird"), "#5FB52E")
 ];
 
-const airportsSmall = new FeatureGroup();
-const airportsLarge = new FeatureGroup();
-airports.forEach(function (airport, index) {
-    const popup = airport.createPopup();
-    const small = new Marker(airport.location, {
-        icon: new Icon({
-            contentHtml: plane_svg,
-            color: "#1b75bb",
-            scale: 0.75,
-            svg: ChipDiamondPanel
-        }),
-    })
-
-    const large = new Marker(airport.location, {
-        icon: new Icon({
-            contentHtml: plane_svg,
-            color: "#1b75bb",
-            scale: 1,
-            svg: ChipDiamondPanel
-        }),
-    });
+const smallLayer = new FeatureGroup();
+const largeLayer = new FeatureGroup();
+markers.forEach(function (marker, index) {
+    const popup = marker.createPopup();
+    const small = marker.render(0.75);
+    const large = marker.render(1);
 
     small.bindPopup(popup);
     large.bindPopup(popup);
 
-    small.addTo(airportsSmall);
-    large.addTo(airportsLarge);
+    small.addTo(smallLayer);
+    large.addTo(largeLayer);
 });
 
-airportsSmall.addTo(map);
+smallLayer.addTo(map);
 
 map.on('zoomend', () => {
     const zoom = map.getZoom();
     if (zoom >= 4) {
-        if (!map.hasLayer(airportsLarge)) {
-            map.removeLayer(airportsSmall);
-            map.addLayer(airportsLarge);
+        if (!map.hasLayer(largeLayer)) {
+            map.removeLayer(smallLayer);
+            map.addLayer(largeLayer);
         }
     } else {
-        if (!map.hasLayer(airportsSmall)) {
-            map.removeLayer(airportsLarge);
-            map.addLayer(airportsSmall);
+        if (!map.hasLayer(smallLayer)) {
+            map.removeLayer(largeLayer);
+            map.addLayer(smallLayer);
         }
     }
 });

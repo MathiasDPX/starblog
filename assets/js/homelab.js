@@ -216,6 +216,14 @@ const caterpillarNodes = [
         desc: "Analytics & Monitoring",
         iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/grafana.png"
     },
+        {
+        key: "lastfm-exporter",
+        group: "metrics",
+        name: "LastFM exporter",
+        desc: "Prometheus exporter for LastFM",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/last-fm.png",
+        tooltip: "https://github.com/MathiasDPX/lastfm-prometheus"
+    },
 
     { key: "exposing", text: "Exposure", isGroup: true, group: "caterpillar" },
     {
@@ -232,6 +240,30 @@ const caterpillarNodes = [
         desc: "Mesh VPN",
         iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tailscale.png"
     },
+
+    { key: "music", text: "Music", isGroup: true, group: "caterpillar" },
+    {
+        key: "navidrome",
+        group: "music",
+        name: "Navidrome",
+        desc: "Music server and streamer",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/navidrome.webp"
+    },
+    {
+        key: "metadata-remote",
+        group: "music",
+        name: "Metadata Remote",
+        desc: "Music metadata editor",
+        iconSrc: "https://raw.githubusercontent.com/wow-signal-dev/metadata-remote/main/screenshots/mdrm-icon-for-light-bg.svg"
+    },
+    {
+        key: "deezer_dl",
+        group: "music",
+        name: "Deezer Downloader",
+        desc: "Music downloader",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/deezer.webp"
+    },
+
 
     {
         key: "qbittorrent",
@@ -255,13 +287,6 @@ const caterpillarNodes = [
         iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/freshrss.png"
     },
     {
-        key: "komga",
-        group: "caterpillar",
-        name: "Komga",
-        desc: "Comics/Mangas media server",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komga.png"
-    },
-    {
         key: "glance",
         group: "caterpillar",
         name: "Glance",
@@ -275,41 +300,6 @@ const caterpillarNodes = [
         desc: "Wakatime middleware",
         iconSrc: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/wakatime.png"
     },
-    {
-        key: "onedrive-proxy",
-        group: "caterpillar",
-        name: "onedrive-proxy",
-        desc: "Files hosting",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/microsoft-onedrive.png"
-    },
-    {
-        key: "jekyll-hackclub",
-        group: "caterpillar",
-        name: "jekyll-hackclub",
-        desc: "Jekyll plugin for HackClub",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png"
-    },
-    {
-        key: "navidrome",
-        group: "caterpillar",
-        name: "Navidrome",
-        desc: "Music server and streamer",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/navidrome.webp"
-    },
-    {
-        key: "pocketid",
-        group: "caterpillar",
-        name: "Pocket ID",
-        desc: "OIDC Provider",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/pocket-id.webp"
-    },
-    {
-        key: "archivetube",
-        group: "caterpillar",
-        name: "ArchiveTube",
-        desc: "YouTube archiving",
-        iconSrc: "https://raw.githubusercontent.com/MathiasDPX/archivetube/refs/heads/main/web/static/favicon.svg"
-    }
 ];
 
 const michkaNodes = [
@@ -336,6 +326,20 @@ const michkaNodes = [
         desc: "Photo and video management",
         iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/immich.png"
     },
+    {
+        key: "komga",
+        group: "michka",
+        name: "Komga",
+        desc: "Comics/Mangas media server",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komga.png"
+    },
+        {
+        key: "pocketid",
+        group: "michka",
+        name: "Pocket ID",
+        desc: "OIDC Provider",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/pocket-id.webp"
+    }
 ]
 
 const nestNodes = [

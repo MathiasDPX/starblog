@@ -3,6 +3,7 @@ const $ = go.GraphObject.make;
 function makeTooltipAdornment() {
     return $(
         go.Adornment, "Auto",
+        new go.Binding("visible", "tooltip", t => !!t && t.trim().length > 0),
         $(go.Shape, "RoundedRectangle", {
             fill: "#1E2A2A",
             stroke: "#6B7C7C",
@@ -10,16 +11,12 @@ function makeTooltipAdornment() {
         }),
         $(go.Panel, "Horizontal", { margin: 8 },
             $(go.TextBlock, {
-                font: "bold 11px sans-serif",
-                stroke: "#ECECEC"
-            }, new go.Binding("text", "tooltip", t => t && t.includes(":") ? t.split(":")[0] + ":" : "")),
-            $(go.TextBlock, {
                 font: "11px sans-serif",
                 stroke: "#ECECEC",
                 margin: new go.Margin(0, 0, 0, 4),
                 maxSize: new go.Size(180, NaN),
                 wrap: go.TextBlock.WrapFit
-            }, new go.Binding("text", "tooltip", t => t ? (t.includes(":") ? t.substring(t.indexOf(":") + 1).trim() : t) : "no tooltip"))
+            }, new go.Binding("text", "tooltip", t => t))
         )
     );
 }
@@ -203,24 +200,21 @@ const caterpillarNodes = [
         group: "metrics",
         name: "qBittorrent exporter",
         desc: "Prometheus exporter for qBittorrent",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png",
-        tooltip: "Ports: 8090/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
     },
     {
         key: "prometheus",
         group: "metrics",
         name: "Prometheus",
         desc: "Monitoring system & time series database",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prometheus.png",
-        tooltip: "Ports: 9090/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prometheus.png"
     },
     {
         key: "grafana",
         group: "metrics",
         name: "Grafana",
         desc: "Analytics & Monitoring",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/grafana.png",
-        tooltip: "Ports: 3000/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/grafana.png"
     },
 
     { key: "exposing", text: "Exposure", isGroup: true, group: "caterpillar" },
@@ -244,88 +238,77 @@ const caterpillarNodes = [
         group: "caterpillar",
         name: "qBittorrent",
         desc: "BitTorrent client",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png",
-        tooltip: "Ports: 17222/tcp, 44910/tcp, 44910/udp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/qbittorrent.png"
     },
     {
         key: "vaultwarden",
         group: "caterpillar",
         name: "Vaultwarden",
         desc: "Password manager",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vaultwarden.png",
-        tooltip: "Ports: 9445/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vaultwarden.png"
     },
     {
         key: "freshrss",
         group: "caterpillar",
         name: "FreshRSS",
         desc: "Feeds aggregator",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/freshrss.png",
-        tooltip: "Ports: 6145/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/freshrss.png"
     },
     {
         key: "komga",
         group: "caterpillar",
         name: "Komga",
         desc: "Comics/Mangas media server",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komga.png",
-        tooltip: "Ports: 25600/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komga.png"
     },
     {
         key: "glance",
         group: "caterpillar",
         name: "Glance",
         desc: "Generic dashboard",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/glance.png",
-        tooltip: "Ports: 7330/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/glance.png"
     },
     {
         key: "wakamitm",
         group: "caterpillar",
         name: "WakaMITM",
         desc: "Wakatime middleware",
-        iconSrc: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/wakatime.png",
-        tooltip: "Ports: 9858/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/wakatime.png"
     },
     {
         key: "onedrive-proxy",
         group: "caterpillar",
         name: "onedrive-proxy",
         desc: "Files hosting",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/microsoft-onedrive.png",
-        tooltip: "Ports: 15298/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/microsoft-onedrive.png"
     },
     {
         key: "jekyll-hackclub",
         group: "caterpillar",
         name: "jekyll-hackclub",
         desc: "Jekyll plugin for HackClub",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png",
-        tooltip: "Ports: 10511/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jekyll.png"
     },
     {
         key: "navidrome",
         group: "caterpillar",
         name: "Navidrome",
         desc: "Music server and streamer",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/navidrome.webp",
-        tooltip: "Ports: 4533/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/navidrome.webp"
     },
     {
         key: "pocketid",
         group: "caterpillar",
         name: "Pocket ID",
         desc: "OIDC Provider",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/pocket-id.webp",
-        tooltip: "Ports: 1411/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/webp/pocket-id.webp"
     },
     {
         key: "archivetube",
         group: "caterpillar",
         name: "ArchiveTube",
         desc: "YouTube archiving",
-        iconSrc: "https://raw.githubusercontent.com/MathiasDPX/archivetube/refs/heads/main/web/static/favicon.svg",
-        tooltip: "Ports: 8080/tcp"
+        iconSrc: "https://raw.githubusercontent.com/MathiasDPX/archivetube/refs/heads/main/web/static/favicon.svg"
     }
 ];
 
@@ -351,8 +334,7 @@ const michkaNodes = [
         group: "michka",
         name: "Immich",
         desc: "Photo and video management",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/immich.png",
-        tooltip: "Ports: 2283/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/immich.png"
     },
 ]
 
@@ -364,8 +346,7 @@ const nestNodes = [
         group: "nest",
         name: "Uptime Kuma",
         desc: "Uptime Kuma",
-        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/uptime-kuma.png",
-        tooltip: "Ports: 3001/tcp"
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/uptime-kuma.png"
     },
     {
         key: "tailscale",
@@ -375,6 +356,14 @@ const nestNodes = [
         iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tailscale.png",
         tooltip: "Tailscale is running in userspace mode exposing a SOCKS5 and HTTP proxy on port 1055"
     },
+    {
+        key: "komodo",
+        group: "nest",
+        name: "Komodo",
+        desc: "Server management",
+        iconSrc: "https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/komodo.png",
+        tooltip: "Only the core is running on Nest, each server is running a periphery"
+    },
 ]
 
 const nodeData = [];
@@ -382,6 +371,6 @@ nodeData.push(...caterpillarNodes);
 nodeData.push(...michkaNodes);
 nodeData.push(...nestNodes);
 
-nodeData.forEach(n => { if (!n.isGroup && n.tooltip === undefined) n.tooltip = "no ports exposed"; });
+nodeData.forEach(n => { if (!n.isGroup && n.tooltip === undefined) n.tooltip = ""; });
 
 diagram.model = new go.GraphLinksModel(nodeData);

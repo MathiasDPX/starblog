@@ -4,6 +4,7 @@ import { Icon, ChipDiamondPanel, createElement } from 'leaflet-extra-marker';
 const map = new Map('map', {
     center: [38, 0],
     zoom: 2.0,
+    minZoom: 1.5,
     zoomControl: false,
     attributionControl: false,
     maxBounds: new LatLngBounds(
@@ -79,6 +80,7 @@ smallLayer.addTo(map);
 
 map.on('zoomend', () => {
     const zoom = map.getZoom();
+    console.log(zoom)
     if (zoom >= 4) {
         if (!map.hasLayer(largeLayer)) {
             map.removeLayer(smallLayer);

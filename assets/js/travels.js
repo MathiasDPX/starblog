@@ -5,10 +5,12 @@ const map = new Map('map', {
     center: [38, 0],
     zoom: 2.0,
     zoomControl: false,
+    attributionControl: false,
     maxBounds: new LatLngBounds(
         new LatLng(-85, -180),
         new LatLng(85, 180)
-    )
+    ),
+    zoomSnap: 0.5,
 });
 
 new TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {

@@ -84,7 +84,7 @@ span#listening img {
             return;
         }
 
-        listeningElem.innerHTML = `<img src="./assets/images/music-notes.svg"> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
+        listeningElem.innerHTML = `<a href="https://www.last.fm/user/MathiasDPX" target="_blank"><img src="./assets/images/music-notes.svg"></a> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
     } catch (error) {
         console.error("Error while fetching music", error);
         listeningElem.remove();

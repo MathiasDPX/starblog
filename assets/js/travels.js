@@ -57,7 +57,7 @@ function get_fa_icon(icon) {
 
 const markers = [
     new HackClubMarker('🇦🇹 <a href="https://midnight.hackclub.com/" target="_blank">Midnight</a>', [48.216391, 16.335855], 'Murder mystery hackathon in January 2026 by Hack Club'),
-    new HackClubMarker('🇺🇸 <a href="https://game.hackclub.com/" target="_blank">Hack Club : The Game</a>', [40.639751, -73.778926], 'Scavenger hunt adventure game across Manhattan in May 2026 by Hack Club'),
+    new HackClubMarker('🇺🇸 <a href="https://game.hackclub.com/" target="_blank">Hack Club : The Game</a>', [40.79875, -73.966805], 'Scavenger hunt adventure game across Manhattan in May 2026 by Hack Club'),
     new HackClubMarker('🇳🇱 <a href="https://beest.hackclub.com/" target="_blank">Beest</a>', [52.070055, 4.324759], 'Building a Strandbeest, a giant walking mechanism made of wood, in August 2026 by Hack Club'),
     new CustomMarker('<a href="https://nantesmakercampus.fr/" target="_blank">Nantes Maker Campus</a>', [47.205478, -1.564178], 'In July 2025/2026 with the <a href="https://mdl29.net/" target="_blank">Maison du Libre</a>', get_fa_icon("elephant"), "#C89B2E"),
     new CustomMarker('<a href="https://unlockyourbrain.bzh/en/" target="_blank">Unlock Your Brain</a>', [48.388886, -4.484716], "In November 2024/2025", get_fa_icon("bird"), "#5FB52E")

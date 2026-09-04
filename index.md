@@ -10,6 +10,14 @@ I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://
 
 Here's some projects I'm proud of: 
 
+> ## Wall Breakers
+> ![Wall Breakers icon](./assets/images/projects/wallbreakers.svg)
+>
+> Website to break paywalls from various news site like Le Monde, Médiapart, Washington Post, Ouest France and more
+> 
+> [GitHub](https://github.com/MathiasDPX/wall-breakers) [Demo](https://news.mathiasd.fr/)
+{: type="project" style="border-left-color: #ececec"}
+
 > ## ArchiveTube
 > ![ArchiveTube icon](./assets/images/projects/archivetube.svg)
 >

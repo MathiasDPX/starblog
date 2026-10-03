@@ -7,7 +7,7 @@ gem "webrick"
 
 group :jekyll_plugins do
     gem "jekyll-environment-variables"
-    gem "jekyll-feed", "~> 0.17"
+    gem "jekyll-feed", "~> 0.18"
     gem "jekyll-tagging"
     gem "jekyll-hackclub"
     gem "jekyll-minifier"

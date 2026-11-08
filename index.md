@@ -4,9 +4,7 @@ layout: default
 # Hi, I'm Mathias
 
 I'm bad at writing but want to write blogposts anyways, I currently live near [Brest](https://www.google.com/maps/search/Brest).
-I'm also an hackclubber ({% mention U080HHYN0JD %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start). You can see my homelab on my [Homelab]({{ '/p/homelab/' | relative_url }}) article
-
-<span id="listening"><img src="./assets/images/music-notes.svg"> Listening to...</span>
+I'm also an hackclubber ({% mention U080HHYN0JD ; mathias %}) and member of [LPH](https://wiki.mdl29.net/doku.php?id=start).
 
 Here's some projects I'm proud of: 
 
@@ -60,42 +58,3 @@ Here's some projects I'm proud of:
 >
 > [GitHub](https://github.com/MathiasDPX/Babarcode) [Demo video](https://www.youtube.com/watch?v=cZzIax472Eg)
 {: type="project" style="border-left-color: #4DAB61"}
-
-
-<style>
-span#listening img {
-    height: 1em;
-    width: auto;
-    display: inline-block;
-}
-</style>
-
-<script>
-(async () => {
-    const listeningElem = document.getElementById('listening');
-    if (!listeningElem) {
-        return;
-    }
-
-    try {
-        const response = await fetch("{{ site.LASTFM_PROXY_ENDPOINT }}");
-        if (!response.ok) {
-            console.error("Unable to fetch music");
-            listeningElem.remove();
-            return;
-        }
-
-        const data = await response.json();
-
-        if (data?.['playing'] !== true) {
-            listeningElem.remove();
-            return;
-        }
-
-        listeningElem.innerHTML = `<a href="https://www.last.fm/user/MathiasDPX" target="_blank"><img src="./assets/images/music-notes.svg"></a> Listening to <i>${data?.['name']}</i> by ${data?.['artist']}`;
-    } catch (error) {
-        console.error("Error while fetching music", error);
-        listeningElem.remove();
-    }
-})();
-</script>

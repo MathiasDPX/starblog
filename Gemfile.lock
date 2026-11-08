@@ -108,7 +108,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-environment-variables
-  jekyll-feed (~> 0.17)
+  jekyll-feed (~> 0.18)
   jekyll-hackclub
   jekyll-minifier
   jekyll-tagging

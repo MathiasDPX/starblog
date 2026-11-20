@@ -15,11 +15,9 @@ wget https://raw.githubusercontent.com/Auburn/FastNoiseLite/refs/heads/master/Go
 go run ./main.go
 ```
 
-## config
+The source for my 88x31 is in `assets/images/8831.ase` and you can export the GIF and PNG with Aseprite
 
-You may need extra config in `_config.yml` if you want to use your Slack and not mine
-- `LASTFM_PROXY_ENDPOINT` is a Cloudflare Workers sourced on [MathiasDPX/workers](https://github.com/MathiasDPX/workers/tree/main/lastfm)
-- and replace all occurences of `U080HHYN0JD` with your Slack ID
+## config
 
 In case my instance of [jekyll-hackclub](https://github.com/MathiasDPX/jekyll-hackclub/tree/master/server) goes down, you'll need to change `HACKCLUB_API` to your own instance
 

@@ -36,8 +36,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
+      # mfinelli/setup-imagemagick 404s since ImageMagick 7.1.2-36 renamed its
+      # AppImage (mfinelli/setup-imagemagick#574), so install from apt instead
       - name: Setup ImageMagick
-        uses: mfinelli/setup-imagemagick@v8
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends imagemagick
 
       - name: Optimize JPEG
         run: find ./assets/images -type f -iname "*.jpg" -exec magick mogrify -strip -interlace plane {} +

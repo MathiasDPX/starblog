@@ -26,8 +26,12 @@ kramdown:
   input: SubSup
   syntax_highlighter: rouge
 
+include:
+  - assets/images
+
 exclude:
-- noise
+  - assets/images/8831.ase
+  - noise
 
 sass:
   sass_dir: _sass
